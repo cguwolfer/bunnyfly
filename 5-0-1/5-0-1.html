@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>商品快訊</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/user.png">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container-fluid">
+      	<div class="row-fluid">
+      		<div class="col-md-3">
+            <a href="../1/Homepage.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      		</div>
+      		<div class="col-md-2">
+            <a href="../2/2-0.html">最新消息/活動</a>
+      		</div>
+          <div class="col-md-2">
+            <a href="../3/3-0.html">找人幫你飛</a>
+          </div>
+          <div class="col-md-2">
+            <a href="../5/5-0.html">會員專區</a>
+          </div>
+      		<div class="col-md-3">
+            <button type="button" name="button">
+              <img src="img/user.png" alt="login">
+              <span>登入/加入Bunny</span>
+            </button>
+      		</div>
+      	</div>
+      </div>
+    </div>
+
+    <!-- register -->
+    <div class="container-fluid2">
+    	<div class="row-fluid">
+    		<div class="col-md-1"></div>
+    		<div class="col-md-8">
+    			<form>
+    				<fieldset>
+    					 <legend>
+                 <img src="img/user.png" alt="">
+                 歡迎加入bunny會員
+               </legend>
+               <label>真實姓名</label><br />
+               <input class="register-input" type="text" required pattern="[\S]{1,20}"><br />
+               <label>E-mail(帳號)</label><br />
+               <input class="register-input" type="email" required /><br />
+               <label>再次輸入E-mail</label><br />
+               <input class="register-input" type="email" required /><br />
+               <label>密碼</label><br />
+               <input
+                 class="register-input" 
+                 type="input"
+                 pattern="[A-Za-z0-9]{6,15}"
+                 title="由大小寫英文和數字所組成的6-15位密碼"
+                 required /><br />
+               <label>再次輸入密碼</label><br />
+               <input
+                 class="register-input"
+                 type="input"
+                 pattern="[A-Za-z0-9]{6,15}"
+                 title="由大小寫英文或數字所組成的6-15位密碼"
+                 required /><br />
+               <label class="checkbox">
+                 <input type="checkbox" />
+                   <span>
+                     註冊前請先閱讀並同意Bunnyfly的
+                     <a href="#">服務條款</a>
+                   </span>
+               </label>
+                 <button class="register-button" type="submit" class="btn">註冊帳號</button>
+    				</fieldset>
+    			</form>
+    		</div>
+    		<div class="col-md-3"></div>
+    	</div>
+    </div>
+
+
+    <div class="clearfix"></div>
+    <!-- footer -->
+    <div class="container-fluid4">
+    	<div class="row-fluid">
+    		<div class="col-md-12">
+          &nbsp;&nbsp;&nbsp;<a href="#">客服中心</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">新手上路</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">常見問題</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">聯絡我們</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">賣家進駐申請</a>
+          <br>
+          <div class="footer-text">
+            Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+          </div>
+    		</div>
+    	</div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

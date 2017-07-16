@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>BunnyFly</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+
+<body>
+<!--Header導覽頁(如要固定導覽頁加入.navbar-fixed-top)-->
+	<div class="header navbar-fixed-top" data-role="header">
+			<div class="container-fluid">
+        		<div class="nav navbar-header col-lg-4">
+            		<div>
+                  <a href="../1/Homepage.html"><img class="imglogo" src="img/logo1-3.png"></a>
+              </div>
+<!--漢堡的縮小選單#myNavbar要對應下面------------------->
+            		<button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse" data-target="#myNavbar">
+                    	<img class="imgmenu" src="img/sider.png">
+                </button>
+               
+            	</div>
+
+           <!--對應漢堡選單-->
+         		<div class="collapse navbar-collapse menulist col-xs-12" id="myNavbar">
+
+            <!--底下放要縮放的內容-->
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a style="color:#000;" data-toggle="modal" href="../2/2-0.html">最新消息/活動</a></li>
+                        <li><a style="color:#000;" data-toggle="modal" href="../3/3-0.html">找人幫你飛</a></li>
+                        <li><a style="color:#000;" data-toggle="modal" href="../4/4-0.html">我來幫你飛</a></li>
+                        <li><a style="color:#000;" data-toggle="modal" href="../5/5-0.html">會員專區</a></li>
+
+                        <li>
+                          <button class="btn" style="background-color:#FC6;">
+                            <a style="color:#000;" href="#">
+                              <span class="glyphicon glyphicon-user"></span>登入/<br>加入Bunny
+                            </a>
+                          </button>
+                        </li>
+                    </ul>
+               </div>
+  <!--以上要縮放的內容-->
+         </div>
+   </div>
+   
+
+<!--content內容頁面------------------------------->
+	
+   		<div class="container"><!--container有自適應屬性-->
+
+            <div class="newsbox">
+       	    	<a href="#">首頁</a>><a href="#">最新消息/活動</a>
+            </div>
+
+			
+
+         	<div class="newstitle">       
+            	<img src="" alt="" /><h3>最新消息</h3>
+         	</div>
+<!---------------以下是預想新增內容---------------->
+<div class="newscontent">
+   	<div class="accordion-container">
+            
+                   <div class="set">
+                        <a href="#">
+                          Vestibulum 
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        </div>
+                  </div>
+                  <div class="set">
+                        <a href="#">
+                          Vestibulum 
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        </div>
+                  </div>
+                  <div class="set">
+                        <a href="#">
+                          Vestibulum 
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        </div>
+                  </div><div class="set">
+                        <a href="#">
+                          Vestibulum 
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                        </div>
+                  </div>
+
+      
+      
+    
+			</div>
+   
+   
+        
+        
+	  </div>
+ 
+    </div>
+<!---------------以下是預想新增內容---------------->        
+
+        </div>
+        
+<!--content內容頁面------------------------------->
+<!-- footer ------------------------------------->
+    <div class="footer">
+      &nbsp;&nbsp;&nbsp;客服中心
+      &nbsp;&nbsp;&nbsp;新手上路
+      &nbsp;&nbsp;&nbsp;常見問題
+      &nbsp;&nbsp;&nbsp;聯絡我們
+      &nbsp;&nbsp;&nbsp;賣家進駐申請
+      <br>
+      Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+    </div>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+  $(".set > a").on("click", function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass("active");
+      $(this).siblings('.content').slideUp(200);
+      $(".set > a span").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+	  document.getElementById("messagebox").innerHTML='...看更多';
+    }else{
+      $(".set > a spam").removeClass("fglyphicon-chevron-up").addClass("glyphicon-chevron-down");
+    $(this).find("span").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+	document.getElementById("messagebox").innerHTML='...收合';
+    $(".set > a").removeClass("active");
+    $(this).addClass("active");
+    $('.content').slideUp(200);
+    $(this).siblings('.content').slideDown(200);
+    }
+    
+  });
+});
+</script>

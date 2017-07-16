@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>BunnyFly</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+<!--Header導覽頁(如要固定導覽頁加入.navbar-fixed-top)-->
+	<div class="header navbar-fixed-top" data-role="header">
+			<div class="container-fluid">
+        		<div class="nav navbar-header col-lg-4">
+            		<div>
+                  <a href="#"><img class="imglogo" src="img/logo.png"></a>
+              </div>
+<!--漢堡的縮小選單#myNavbar要對應下面------------------->
+            		<button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse" data-target="#myNavbar">
+                    	<img class="imgmenu" src="img/sider.png">
+                </button>
+                <button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse"  data-target="#myNavbar2">
+                      <img src="img/search-icon.png" class="imgmenu">
+                </button>
+            	</div>
+
+           <!--對應漢堡選單-->
+         		<div class="collapse navbar-collapse menulist col-xs-12" id="myNavbar">
+
+            <!--底下放要縮放的內容-->
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a style="color:#fff;" data-toggle="modal" href="../2/2-0.html">最新消息/活動</a></li>
+                        <li><a style="color:#fff;" data-toggle="modal" href="../3/3-0.html">找人幫你飛</a></li>
+                        <li><a style="color:#fff;" data-toggle="modal" href="../4/4-0.html">我來幫你飛</a></li>
+                        <li><a style="color:#fff;" data-toggle="modal" href="../5/5-0.html">會員專區</a></li>
+
+                        <li>
+                          <button class="btn" style="background-color:#FC6;">
+                            <a style="color:#fff;" href="#">
+                              <span class="glyphicon glyphicon-user"></span>登入/<br>加入Bunny
+                            </a>
+                          </button>
+                        </li>
+                    </ul>
+               </div>
+  <!--以上要縮放的內容-->
+         </div>
+   </div>
+
+<!--content內容頁面------------------------------->
+   		<div class="col-xs-1"></div>
+ <!--content搜尋面板------------------------------->
+
+                 <div class="collapse navbar-collapse searchbox center-block" id="myNavbar2">
+
+                 <form>
+                   	   <table align="center">
+                          <tr>
+                            <td class="searchtd" align="center">
+                                <select name="choose" style="height:40px;">
+                                  <option value="all">--全部--</option>
+                                  <option value="product">找產品</option>
+                                  <option value="contry">找國家</option>
+                                </select>
+                                  <input class="input-medium search-query searchtxt" type="text" placeholder="想買什麼？BunnyFly幫你飛" />
+                                  <button type="submit" class="btn" style="height:40px;">GO</button>
+                              </td>
+                            </tr>
+                        </table>
+                     </form>
+                 </div>
+
+ <!--以上是搜尋面板------------------------------->
+ <!--輪播-------------------------------------->
+ 			<div class="banner">
+                 <div id="myCarousel" class="carousel slide">
+                     <ol class="carousel-indicators">
+                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#myCarousel" data-slide-to="1"></li>
+                           <li data-target="#myCarousel" data-slide-to="2"></li>
+                     </ol>
+                  <!-- Carousel items -->
+                     <div class="carousel-inner">
+                           <div class="active item">
+                           		<img src="img/1.jpeg" alt="...">
+                           </div>
+                           <div class="item">
+                           		<img src="img/2.jpg" alt="...">
+                           </div>
+                           <div class="item">
+                           		<img src="img/3.jpg" alt="...">
+                           </div>
+                     </div>
+                  <!-- Carousel nav -->
+                     <a class="carousel-control left" href="#myCarousel" data-slide="prev" style="top:calc(50%);"><h1>&lsaquo;</h1></a>
+                     <a class="carousel-control right" href="#myCarousel" data-slide="next" style="top:calc(50%);"><h1>&rsaquo;</h1></a>
+                </div>
+             </div>
+ <!--輪播-------------------------------------->
+
+ <!-- bottom -->
+          <div class="bottom">
+            <hr />
+              	<div class="bot1">
+              		<div class="grid-container">
+
+                      <div class="grid-item one">
+                        <div>One</div>
+                      </div>
+                      <div class="grid-item two">
+                        <div>Two</div>
+                      </div>
+                      <div class="grid-item three">
+                        <div>three</div>
+                      </div>
+                      <div class="grid-item four">
+                        <div>four</div>
+                      </div>
+                      <div class="grid-item five">
+                        <div>five</div>
+                      </div>
+                      <div class="grid-item six">
+                        <div>six</div>
+                      </div>
+             	  </div>
+             </div>
+			  </div>
+
+<!--content內容頁面------------------------------->
+<!-- footer ------------------------------------->
+    <div class="footer">
+      &nbsp;&nbsp;&nbsp;客服中心
+      &nbsp;&nbsp;&nbsp;新手上路
+      &nbsp;&nbsp;&nbsp;常見問題
+      &nbsp;&nbsp;&nbsp;聯絡我們
+      &nbsp;&nbsp;&nbsp;賣家進駐申請
+      <br>
+      Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+    </div>
+
+</body>
+</html>
