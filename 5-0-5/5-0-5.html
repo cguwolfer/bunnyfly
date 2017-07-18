@@ -3,15 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>商品上架</title>
-    <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" type="image/png" href="img/user.png">
+    <link rel="stylesheet" href="./css/product.css">
+		<link rel="stylesheet" href="./css/5-0-5.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 		
   </head>
+	
+	<script>
+		$(document).ready(
+			function () {
+				$('#product_launch ul li a').click(
+					function (ev) {
+						$('#product_launch ul li a').removeClass('selected');
+						//$('#product_launch ul li').removeClass('selected');
+						//$(ev.currentTarget).parent('li').addClass('selected');
+						$(ev.currentTarget).addClass('selected');
+					}
+				);
+			}
+		);
+	</script>
+	
   <body>
     <!-- header -->
     <div class="header">
@@ -38,19 +54,101 @@
       	</div>
       </div>
     </div>
+		<div class="container-fluid" id="product_div">		
 		
-		<div class="container" id="member_menu">
-		
-		
-		</div>
-		
-		<div class="container" id="member_menu">
-		
-		
+			<div class="col-md-2" id="member_menu">
+				<h4 class="menu_header">
+					會員專區
+				</h3>
+				<hr class="menu_hr">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="active">
+						<a data-toggle="tab" class="list_btn" href="#modify_data">基本資料修改</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#orders_management">訂單管理</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#my_favorite">我的收藏/訂閱</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#store_setting">商城基本設定</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#product_launch">商城產品上架</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#orders_from_customer">商城訂單管理</a>
+					</li>
+					<li>
+						<a data-toggle="tab" class="list_btn" href="#sales_promotion">行銷活動</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="col-md-7 tab-content" id="member_content">
+				<div class="tab-pane fade in active" id="modify_data">
+					<h4 class="content_header">基本資料修改</h4>
+				</div>
+				<div class="tab-pane fade" id="orders_management">
+					<h4 class="content_header">訂單管理</h4>
+				</div>
+				<div class="tab-pane fade" id="my_favorite">
+					<h4 class="content_header">我的收藏/訂閱</h4>
+				</div>
+				<div class="tab-pane fade" id="store_setting">
+					<h4 class="content_header">商城基本設定</h4>
+				</div>
+				<div class="tab-pane fade" id="product_launch">
+					<h4 class="content_header">商城產品上架</h4>
+					<hr class="menu_hr" >
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a data-toggle="tab" href="#new_product" class="selected">新增商品</a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#product_on_sale">已上架商品</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="new_product">
+							<div id="new_product_content">
+								<div id="product_content_padding">
+									<div class="row1">
+										
+									</div>
+									<div class="row2">
+										
+									</div>
+									<div class="row3">
+										
+									</div>
+									<div class="row4">
+										
+									</div>
+									<div class="row5">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade in" id="product_on_sale">
+							已上架商品
+						</div>
+					</div>
+					
+				</div>
+				<div class="tab-pane fade" id="orders_from_customer">
+					<h4 class="content_header">商城訂單管理</h4>
+				</div>
+				<div class="tab-pane fade" id="sales_promotion">
+					<h4 class="content_header">行銷活動</h4>
+				</div>
+			</div>
 		</div>
 		
     <!-- footer -->
-    <div class="container-fluid6">
+    <div class="container-fluid footer">
     	<div class="row-fluid">
     		<div class="col-md-12">
           &nbsp;&nbsp;&nbsp;<a href="#">客服中心</a>
