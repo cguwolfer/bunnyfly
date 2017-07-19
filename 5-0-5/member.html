@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>會員專區</title>
+    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/user.png">
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="col-xs-3">
+            <img class="logo" src="img/logo.png" alt="logo">
+          </div>
+          <div class="col-xs-2">
+            <a href="#">最新消息/活動</a>
+          </div>
+          <div class="col-xs-2">
+            <a href="#">找人幫你飛</a>
+          </div>
+          <div class="col-xs-2">
+            <a href="#">會員專區</a>
+          </div>
+          <div class="col-xs-3">
+            <button type="button" name="button">
+              <img src="img/user.png" alt="login">
+              <span>登入/加入Bunny</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 會員專區middle -->
+    <div class="container-fluid1">
+    	<div class="row-fluid">
+    		<div class="col-xs-1"></div>
+    		<div class="col-xs-2">
+          <h3>會員專區</h3>
+          <hr />
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-stacked">
+              <li class="active"><a href="#panel1" data-toggle="tab">基本資料修改</a></li>
+              <li><a href="#panel2" data-toggle="tab">訂單管理</a></li>
+              <li><a href="#panel3" data-toggle="tab">我的收藏/訂閱</a></li>
+              <li><a href="#panel4" data-toggle="tab">商城基本設定</a></li>
+              <li><a href="#panel5" data-toggle="tab">商城商品上架</a></li>
+              <li><a href="#panel6" data-toggle="tab">商城訂單管理</a></li>
+              <li><a href="#panel7" data-toggle="tab">行銷活動</a></li>
+            </ul>
+          </div>
+    		<div class="col-xs-8">
+          <div class="tab-content">
+
+            <!-- 基本資料修改 -->
+            <div class="tab-pane active" id="panel1">
+              <h4>基本資料修改</h4>
+              <hr />
+              <div class="col-xs-4">
+                <div id="my-mask" class="mask-wrapper">
+                  <img class="img-circle" src="img/member1.jpg" alt="">
+                  <div class="mask-inner"><a href="#">點我變更大頭照</a></div>
+                </div>
+              </div>
+              <div class="col-xs-8">
+                <div class="panel1-1">
+                  <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">帳號</label>
+                      <div class="col-sm-6"><input type="text" class="form-control" placeholder="bunnyfly@gmail.com"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">舊密碼</label>
+                      <div class="col-sm-6"><input type="password" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">新密碼</label>
+                      <div class="col-sm-6"><input type="password" class="form-control"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">確認新密碼</label>
+                      <div class="col-sm-6"><input type="password" class="form-control"></div>
+                    </div>
+                    <button class="middle-button1" type="button" name="button">確認修改</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- 訂單管理 -->
+            <div class="tab-pane" id="panel2">
+              <h4>訂單管理</h4>
+              <hr />
+              <div class="panel2-a">
+                <a href="#">一個月內的訂單</a>&nbsp;‧&nbsp;<a href="#">半年內的訂單</a>
+              </div>
+              <div class="panel2-table">
+                <table class="table table-striped">
+                  <tr>
+                    <td>委託日期</td>
+                    <td>商品名稱</td>
+                    <td>商品規格</td>
+                    <td>數量</td>
+                    <td>售價</td>
+                    <td>代購方</td>
+                    <td>問題/備註</td>
+                    <td>訂單狀態</td>
+                  </tr>
+                  <tr>
+                    <td>2017/07/10</td>
+                    <td>日本迪士尼《冰雪奇緣FROZEN》全系列商品代購</td>
+                    <td>雪寶</td>
+                    <td>1</td>
+                    <td>2603</td>
+                    <td>
+                      Clover日本代購<br />
+                      <button type="button" name="button">聯絡我</button>
+                    </td>
+                    <td>
+                      超愛雪寶!包裝請幫我包厚一點，謝謝!
+                      再請問之後還會有嗎?想再買一個成對。
+                    </td>
+                    <td>訂單確認中</td>
+                  </tr>
+                  <tr>
+                    <td>2017/07/10</td>
+                    <td>日本迪士尼《冰雪奇緣FROZEN》全系列商品代購</td>
+                    <td>愛莎造型椅</td>
+                    <td>1</td>
+                    <td>2603</td>
+                    <td>
+                      Clover日本代購<br />
+                      <button type="button" name="button">聯絡我</button>
+                    </td>
+                    <td></td>
+                    <td>
+                      訂單已成立
+                      <button type="button" name="button">給評價</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" name="button">聯絡我</button></td>
+                    <td></td>
+                    <td>賣家拒絕此訂單</td>
+                  </tr>
+                  <tr>
+                    <td>2017/07</td>
+                    <td>測試</td>
+                    <td>測試</td>
+                    <td>1</td>
+                    <td>2603</td>
+                    <td>西班牙代購</td>
+                    <td>測試</td>
+                    <td>訂單已成立</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="panel2-nav">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">pre</span>
+                      </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+        			</div>
+            </div>
+
+            <!-- 我的收藏/訂閱 -->
+            <div class="tab-pane" id="panel3">
+              <h4>我的收藏/訂閱</h4>
+              <hr />
+              <div class="panel2-a">
+                <a href="#">按價格排序</a>&nbsp;‧&nbsp;<a href="#">按賣家評分排序</a>
+              </div>
+              <div class="panel3-tab">
+                <div class="tabbable" id="tabs3-1">
+          				<ul class="nav nav-tabs">
+          					<li class="active">
+          						<a href="#panel3-1" data-toggle="tab">產品收藏</a>
+          					</li>
+          					<li>
+          						<a href="#panel3-2" data-toggle="tab">商城訂閱</a>
+          					</li>
+          				</ul>
+                </div>
+                <div class="tab-content">
+      					 <div class="tab-pane active" id="panel3-1">
+                  <div class="panel3-background">
+                    <div class="col-xs-4">
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                      <div class="panel3-img">
+                        <a href="#" target="_blank"><img src="img/shoes0.jpg" alt=""></a><br />
+                        [現貨在台]<br />
+                        NikeCortezLeather<br />
+                        櫻花粉紅阿甘*英國限定發售<br />
+                        PENTA SHOP 全球代購<br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        售價：$4200&nbsp;&nbsp;品牌：Nike<br />
+                        <img src="img/map-icon.png" alt="">英國
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel2-nav">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li>
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">pre</span>
+                          </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+      					</div>
+      					 <div class="tab-pane" id="panel3-2">
+                  <div class="panel3-background">
+                    <div class="col-xs-4">
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                      <div class="panel3-2img">
+                        <a href="#" target="_blank"><img src="img/lala1.jpg" alt=""></a><br />
+                        <a href="#" target="_blank"><img class="img-circle" src="img/lala.jpg" alt=""></a><br />
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star.png" alt="">
+                        <img src="img/star-half.png" alt=""><br />
+                        Shoplala 全球代購<br />
+                        <img src="img/map-icon.png" alt="">美國、英國
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel2-nav">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li>
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">pre</span>
+                          </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">next</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+
+      					</div>
+      				  </div>
+              </div>
+            </div>
+
+            <!-- 商城基本設定 -->
+            <div class="tab-pane" id="panel4">
+              商城基本設定
+            </div>
+
+            <!-- 商城商品上架 -->
+            <div class="tab-pane" id="panel5">
+              <h4>商城商品上架</h4>
+              <hr />
+              <div class="panel5-tab">
+                <div class="tabbable" id="tabs5-1">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#panel5-1" data-toggle="tab">新增商品</a>
+                    </li>
+                    <li>
+                      <a href="#panel5-2" data-toggle="tab">已上架商品</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="panel5-1">
+                    <div class="panel3-background">
+                      <div class="col-xs-1"></div>
+                      <div class="col-xs-10">
+                        <div class="row">
+                          <label class="labels">商品分類</label>
+                          <select>
+                            <option value="">獲取分類</option>
+                            <option value="">異國美食</option>
+                            <option value="">3C家電</option>
+                            <option value="">地方特產</option>
+                          </select>
+                          <br />
+                          <span>圖片上傳</span>
+                          <br />
+                          <input type="file" name="" value="">
+                          <br />
+                          <div class="row1">
+                            <label class="labels">商品名稱</label>
+                            <input type="text" name="" value="" placeholder="日本代購MR COFFEE cafe frappe 花式咖啡冰沙機">
+                            <br />
+                            <label>售價</label>
+                            <input type="text" name="" value="" placeholder="請輸入台幣">
+                            <br />
+                            <label>品牌</label>
+                            <input type="text" name="" value="" placeholder="請輸入品牌">
+                            <br />
+                            <label>代購自</label>
+                            <select>
+                              <option value="Japan">國家</option>
+                              <option value="Spain">西班牙</option>
+                              <option value="France">法國</option>
+                              <option value="America">美國</option>
+                            </select>
+                            <br />
+                            <label>等待天數</label>
+                            <input type="text" name="" value="" placeholder="請輸入數字">
+                            <br />
+                            <label>費用說明</label>
+                            <br />
+                            <textarea name="name" rows="12" cols="75"></textarea>
+                            <br />
+                            <br />
+                            <label>商品資訊</label>
+                            <textarea name="name" rows="12" cols="75"></textarea>
+                            <br />
+                            <br />
+                            <button type="button" name="button">新增商品</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-1"></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="panel5-2">
+                    <div class="panel3-background">
+                      <div class="panel5-2-a"><a href="#">下架勾選商品</a></div>
+                      <br />
+                      <br />
+                      <div class="col-xs-1"></div>
+                      <div class="col-xs-10">
+                        <table class="table table-striped">
+                          <tr>
+                            <td>日期</td>
+                            <td>照片</td>
+                            <td>類別</td>
+                            <td>商品名稱</td>
+                            <td>售價</td>
+                            <td>管理</td>
+                          </tr>
+                          <tr>
+                            <td>2017/7/14</td>
+                            <td><img src="img/ice.png" alt=""></td>
+                            <td>家電3C</td>
+                            <td>日本代購MR COFFEE cafe frappe花式咖啡冰沙機</td>
+                            <td>$11200</td>
+                            <td>
+                              <button type="button" name="button">編輯</button>
+                              <button type="button" name="button">下架</button>
+                              <input type="checkbox" name="" value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2017/4/5</td>
+                            <td><img src="img/photo.jpg" alt=""></td>
+                            <td>異國美食</td>
+                            <td>依蝶日本限定-Pure荔枝口味愛心軟糖，56g</td>
+                            <td>$90</td>
+                            <td>
+                              <button type="button" name="button">編輯</button>
+                              <button type="button" name="button">上架</button>
+                              <input type="checkbox" name="" value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>
+                              <button type="button" name="button">編輯</button>
+                              <button type="button" name="button">上架</button>
+                              <input type="checkbox" name="" value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>測試訂單</td>
+                            <td>
+                              <button type="button" name="button">編輯</button>
+                              <button type="button" name="button">上架</button>
+                              <input type="checkbox" name="" value="">
+                            </td>
+                          </tr>
+                        </table>
+                        <div class="panel2-nav">
+                          <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">pre</span>
+                                </a>
+                              </li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">next</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                      <div class="col-xs-1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 商城訂單管理 -->
+            <div class="tab-pane" id="panel6">
+              訂單管理
+            </div>
+
+            <!-- 行銷活動 -->
+            <div class="tab-pane" id="panel7">
+              行銷活動
+            </div>
+
+            <!-- tab-content-end -->
+          </div>
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+    <!-- footer -->
+    <div class="container-fluid5">
+      <div class="row-fluid">
+        <div class="col-xs-12">
+          &nbsp;&nbsp;&nbsp;<a href="#">客服中心</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">新手上路</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">常見問題</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">聯絡我們</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">賣家進駐申請</a>
+          <br>
+          <div class="footer-text">
+            Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
