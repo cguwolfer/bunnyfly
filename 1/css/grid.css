@@ -15,7 +15,7 @@
 	  grid-column-gap: 10px;
 	  grid-row-gap: 10px;
 	}
-
+ 
 	.grid-item div {
 	  display: flex;
 	  color: #fff;
