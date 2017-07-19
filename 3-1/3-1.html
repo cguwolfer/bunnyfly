@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>BunnyFly</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+a, img {
+border: 0;
+text-decoration: none;
+}
+
+.body {
+font: 13px/180% Arial, Helvetica, sans-serif, "華康儷細黑";
+background: #FFF;
+color:black;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+	}
+/* Hides from IE-mac */
+*html .clearfix {
+	height: 1%;
+	}
+
+.clearfix {
+	display: block;
+	}
+/* End hide from IE-mac */
+* + html .clearfix {
+	min-height: 1%;
+	}
+/* hovertreeaction */
+.hovertreeaction {
+	width: 981px;
+	margin: 40px auto 0 auto;
+	overflow: hidden;
+	}
+
+.hovertreeaction ul {
+	width: 1280px;
+	}
+
+.hovertreeaction ul li {
+	float: left;
+	margin-right: -70px;
+	margin-bottom:-95px;
+	display: inline;
+	width: 318px;
+	height: 343px;
+	overflow: hidden;
+	position: relative;
+	}
+
+.hovertreeaction ul li .photo {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+	}
+
+.hovertreeaction .rsp {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+	position: absolute;
+	background: #DDD;
+	top: 0px;
+	left: 0px;
+	}
+
+.hovertreeaction .text {
+	position: absolute;
+	width: 220px;
+	height: 220px;
+	left: -318px;
+	top: 0px;
+	overflow: hidden;
+	}
+
+.hovertreeaction .text h3 {
+	width: 220px;
+	margin-top: 40px;
+	height: 85px;
+	line-height: 20px;
+	text-align: center;
+	color: #000;
+	background: #00000000;
+	font-family: "microsoft JhengHei";
+	font-size: 15px;
+	}
+
+#foot_bm a, #foot_bm, p, p a {
+color: #666;
+}
+
+.ss1 {
+
+    list-style: none;
+	text-align: left;
+    background: #eee;
+	margin-top:120px; 
+	margin-left:220px;
+  }
+.ss2 {
+    display:inline-block;
+
+  }
+.cc1{
+	list-style: none;
+	text-align: center;
+    background: #eee;
+}
+.cc2{
+    display:inline-block;
+	margin: 0 15px; 
+}
+</style> 
+</head>
+
+<body>
+<!--Header導覽頁(如要固定導覽頁加入.navbar-fixed-top)-->
+	<div class="header navbar-fixed-top" data-role="header">
+			<div class="container-fluid">
+        		<div class="nav navbar-header col-lg-4">
+            		<div>
+                 <a href="../1/Homepage.html"><img class="imglogo" src="img/logo.png"></a>
+              </div>
+<!--漢堡的縮小選單#myNavbar要對應下面------------------->
+            		<button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse" data-target="#myNavbar">
+                    	<img class="imgmenu" src="img/sider.png">
+                </button>
+                <button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse"  data-target="#myNavbar2">
+                      <img src="img/search-icon.png" class="imgmenu">
+                </button>
+            	</div>
+
+           <!--對應漢堡選單-->
+         		<div class="collapse navbar-collapse menulist col-xs-12" id="myNavbar">
+
+            <!--底下放要縮放的內容-->
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="../2/2-0.html" style="color:#fff;" data-toggle="modal">最新消息/活動</a></li>
+                        <li><a href="../3/3-0.html" style="color:#fff;" data-toggle="modal">找人幫你飛</a></li>
+                        <li><a href="../5/5-0.html" style="color:#fff;" data-toggle="modal">會員專區</a></li>
+
+                        <li>
+                          <button class="btn" style="background-color:#FC6;">
+                            <a style="color:#fff;" href="#">
+                              <span class="glyphicon glyphicon-user"></span>登入/<br>加入Bunny
+                            </a>
+                          </button>
+                        </li>
+                    </ul>
+               </div>
+  <!--以上要縮放的內容-->
+         </div>
+   </div>
+
+
+<ul class="ss1">
+
+<font style="cursor='hand' 
+         onMouseover="this.color="#3399CC""
+         onmouseout="this.color='000000'"">  
+  <li class="ss2">首頁</li></font>
+      
+      <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+      <li class="ss2">></li></font>
+      
+      <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+   	  <li class="ss2">我來幫你飛</li></font>
+      
+      <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+      <li class="ss2">></li></font>
+      
+      <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+   	  <li class="ss2">服飾.鞋.包</li></font>
+</ul>
+
+<div class="hovertreeaction">
+
+<font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+ <h4>服飾.鞋.包</h4>
+ </font>
+
+<ul class="clearfix">
+    
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+<li>
+<div class="photo"><img src="img/1.jpeg" width="220" height="220" /></div>
+    <div class="rsp"></div>
+    <div class="text"><a href=""><h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>2017歐洲夏季折扣<br>6折精簡V字號<br>素食環保運動鞋Veja</h3><p style="font-size: 14px; text-align:center">Z coin 法國特派員<p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11">英國</p></p></a></div>
+</li>
+
+</ul>
+<div class="clear"></div>
+</div>
+
+<p class="dp">
+     <ul class="cc1">
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">|< pre</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">1</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">2</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">3</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">4</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">5</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">6</li></font>
+     
+     <font style=cursor='hand' 
+         onMouseover="this.color='#3399CC'"
+         onmouseout="this.color='000000'">  
+     <li class="cc2">next >|</li></font>
+  </ul>
+</p>
+
+<script>
+	$(document).ready(function(){
+	
+	$(".hovertreeaction ul li .rsp").hide();
+	
+	$(".hovertreeaction     ul li").hover(function(){
+	$(this).find(".rsp").stop().fadeTo(500,0.5)
+	$(this).find(".text").stop().animate({left:'0'}, {duration: 500})
+	},function(){
+	$(this).find(".rsp").stop().fadeTo(500,0)
+	$(this).find(".text").stop().animate({left:'318'}, {duration: "fast"})
+	$(this).find(".text").animate({left:'-318'}, {duration: 0})
+	});
+	
+	});
+</script>
+
+
+
+<!--content內容頁面------------------------------->
+<!-- footer ------------------------------------->
+    <div class="footer">
+      &nbsp;&nbsp;&nbsp;客服中心
+      &nbsp;&nbsp;&nbsp;新手上路
+      &nbsp;&nbsp;&nbsp;常見問題
+      &nbsp;&nbsp;&nbsp;聯絡我們
+      &nbsp;&nbsp;&nbsp;賣家進駐申請
+      <br>
+      Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+    </div>
+<style type="text/css">
+.dp{font-family:'microsoft yahei';padding:20px 0;text-align:center;font-size:14px;color:#454545;line-height:22px;}
+</style> 
+</body>
+</html>
