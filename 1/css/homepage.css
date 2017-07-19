@@ -7,7 +7,7 @@
 
 .header{
   width: 100%;
-  height: 60px;
+  height: 85px;
   margin: 0 auto;
   background: #4c4c4c;
 
@@ -25,7 +25,100 @@
   width: 140px;
 }
 
+/*header導覽列*/
+ul li{
+  list-style: none;
+}
+.nav-text{
+  background: #4c4c4c;
+  border-radius: 10px;
+  margin-left: 80px;
+}
+/* 選單 li 之樣式 */
+ul.navigation li {
+  position: relative;
+  float: left;
+}
+/* 選單 li 裡面連結之樣式 */
+ul.navigation li a{
+  display: block;
+  font-size: 14px;
+  padding: 20px 30px;
+  background: #4c4c4c;
+  color: #FFF;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+/* 特定在第一層，以左邊灰線分隔 */
+/*ul.navigation > li > a{
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}*/
+ul.navigation > li > a:hover{
+  color: #666;
+  background: #DDD
+}
+/* 特定在第一層 > 第二層或以後下拉部分之樣式 */
+ul.navigation ul{
+  display: none;
+  float: left;
+  position: absolute;
+  left: 0;
+  margin: 0;
+}
+/* 當第一層選單被觸發時，指定第二層顯示 */
+ul.navigation li:hover > ul{
+  display: block;
+}
+/* 特定在第二層或以後下拉部分 li 之樣式 */
+ul.navigation ul li {
+  border-bottom: 1px solid #DDD;
+}
+/* 特定在第二層或以後下拉部分 li （最後一項不要底線）之樣式 */
+ul.navigation ul li:last-child {
+  border-bottom: none;
+}
+/* 第二層或以後選單 li 之樣式 */
+ul.navigation ul a {
+  width: 150px;
+  padding: 10px 12px;
+  color: #666;
+  background: #EEE;
+}
+ul.navigation ul a:hover {
+  background: #CCC;
+}
+/* 第三層之後，上一層的選單觸發則顯示出來（皆為橫向拓展） */
+ul.navigation ul li:hover > ul{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+/* 箭頭向下 */
+.arrow-bottom {
+  display: inline-block;
+  margin-left: 5px;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  width: 1px;
+  height: 1px;
+}
 
+/* 箭頭向右 */
+.arrow-right {
+  display: inline-block;
+  margin-left: 12px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid #666;
+  width: 1px;
+  height: 1px;
+}
+
+
+/*search欄位*/
 .searchbox{
 	padding-top:50px;
 	margin:40px 50vw;
@@ -63,9 +156,7 @@
   padding-top: 50px;
 }
 
-.footer{
-  position:relative;
-  width: 100%;
+.container-fluid2{
   height: 100px;
   background-color: #4c4c4c;
   color: #fff;
@@ -73,4 +164,7 @@
   font-size: 20px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
+}
+.footer-text{
+  font-size: 14px;
 }
