@@ -11,6 +11,9 @@ button{
   margin: 0 auto;
   background: #eee;
 }
+.header a{
+  color: #969696;
+}
 .logo{
   width: 140px;
   height: 60px;
@@ -137,6 +140,9 @@ button{
   font-size: 25px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
+}
+.container-fluid6 a{
+  color: #969696;
 }
 .footer-text{
   font-size: 14px;
