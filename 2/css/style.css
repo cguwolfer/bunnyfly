@@ -3,30 +3,29 @@
 /* CSS Document */
 *{
   font-family: "Microsoft JhengHei";
-  font-weight: bold;
 }
-
+button{
+  background: #9999FF;
+  border-radius: 15px;
+}
 .header{
   width: 100%;
   height: 60px;
   margin: 0 auto;
-  background: #eeeeee;
-  border-bottom:#06F solid;
-
+  background: #4c4c4c;
 }
-
-.imgmenu{
-	width:20px;
-	height:20px;
-
-}
-
-.imglogo{
-  float: left;
-  margin:0 0 0 8vw;
+.logo{
   width: 140px;
+  height: 60px;
+  float: right;
 }
-
+.row-fluid .col-md-3 button{
+  height: 60px;
+}
+.row-fluid .col-md-2{
+  padding-top: 30px;
+  padding-left: 30px;
+}
 
 .newsbox{
 	text-align:left;
@@ -37,7 +36,7 @@
 .menulist{
 	margin:0 auto;
 	width:100%;
-	background: #eeeeee;
+	background: #4c4c4c;
 
 }
 .newstitle{
@@ -60,17 +59,22 @@
 }
 
 
-.footer{
-  position:relative;
-  width: 100%;
+/*footer*/
+.container-fluid4{
+  margin-top: 100px;
+	margin-left:auto;
   height: 100px;
-  background-color: ;
-  color: #000;
+width: 100%;
+  background-color: #EEEEEE;
+  color: #fff;
   text-align: center;
   font-size: 20px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
-  border-top:1px #06F solid;
+}
+.footer-text{
+	color:black;
+  font-size: 14px;
 }
 
 
@@ -86,6 +90,7 @@
   width: 100%;
   height: auto;
   background-color: #f5f5f5;
+  
 }
 .set > a{
   display: block;
@@ -97,6 +102,8 @@
   -webkit-transition:all 0.2s linear;
   -moz-transition:all 0.2s linear;
   transition:all 0.2s linear;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
 }
 .more{
   width: 60px;
