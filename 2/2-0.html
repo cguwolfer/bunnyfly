@@ -3,52 +3,41 @@
 <head>
 <meta charset="utf-8">
     <title>BunnyFly</title>
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
 
-    <link rel="icon" type="image/png" href="./img/logo.png" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="./js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 
 <body>
 <!--Header導覽頁(如要固定導覽頁加入.navbar-fixed-top)-->
-	<div class="header navbar-fixed-top" data-role="header">
-			<div class="container-fluid">
-        		<div class="nav navbar-header col-lg-4">
-            		<div>
-                  <a href="../1/Homepage.html"><img class="imglogo" src="img/logo1-3.png"></a>
-              </div>
-<!--漢堡的縮小選單#myNavbar要對應下面------------------->
-            		<button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse" data-target="#myNavbar">
-                    	<img class="imgmenu" src="img/sider.png">
-                </button>
-               
-            	</div>
-
-           <!--對應漢堡選單-->
-         		<div class="collapse navbar-collapse menulist col-xs-12" id="myNavbar">
-
-            <!--底下放要縮放的內容-->
-                    <ul class="nav navbar-nav navbar-right">
-
-                        <li><a style="color:#000;" data-toggle="modal" href="../2/2-0.html">最新消息/活動</a></li>
-                        <li><a style="color:#000;" data-toggle="modal" href="../3/3-0.html">找人幫你飛</a></li>
-                        <li><a style="color:#000;" data-toggle="modal" href="../4/4-0.html">我來幫你飛</a></li>
-                        <li><a style="color:#000;" data-toggle="modal" href="../5/5-0.html">會員專區</a></li>
-
-                        <li>
-                          <button class="btn" style="background-color:#FC6;">
-                            <a style="color:#000;" href="#">
-                              <span class="glyphicon glyphicon-user"></span>登入/<br>加入Bunny
-                            </a>
-                          </button>
-                        </li>
-                    </ul>
-               </div>
-  <!--以上要縮放的內容-->
-         </div>
-   </div>
+	<!-- header -->
+    <div class="header">
+      <div class="container-fluid">
+      	<div class="row-fluid">
+      		<div class="col-md-3">
+            <img class="logo" src="img/logo.png" alt="logo">
+      		</div>
+      		<div class="col-md-2">
+            <a href="#">最新消息/活動</a>
+      		</div>
+          <div class="col-md-2">
+            <a href="#">找人幫你飛</a>
+          </div>
+          <div class="col-md-2">
+            <a href="#">會員專區</a>
+          </div>
+      		<div class="col-md-3">
+            <button type="button" name="button">
+              <img src="img/user.png" alt="login">
+              <span>登入/加入Bunny</span>
+            </button>
+      		</div>
+      	</div>
+      </div>
+    </div>
    
 
 <!--content內容頁面------------------------------->
@@ -70,48 +59,77 @@
             
                    <div class="set">
                         <a href="#">
-                          Vestibulum 
+                          2017.07.11 開幕慶歡樂送，加入會員送500折扣券，可立即使用
                         
                         <span class="glyphicon glyphicon-chevron-down more"></span>
                         <p class="more" id="messagebox">...看更多</p>
                         </a>
                         <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        </div>
-                  </div>
-                  <div class="set">
-                        <a href="#">
-                          Vestibulum 
-                        
-                        <span class="glyphicon glyphicon-chevron-down more"></span>
-                        <p class="more" id="messagebox">...看更多</p>
-                        </a>
-                        <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        </div>
-                  </div>
-                  <div class="set">
-                        <a href="#">
-                          Vestibulum 
-                        
-                        <span class="glyphicon glyphicon-chevron-down more"></span>
-                        <p class="more" id="messagebox">...看更多</p>
-                        </a>
-                        <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        </div>
-                  </div><div class="set">
-                        <a href="#">
-                          Vestibulum 
-                        
-                        <span class="glyphicon glyphicon-chevron-down more"></span>
-                        <p class="more" id="messagebox">...看更多</p>
-                        </a>
-                        <div class="content">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        </div>
-                  </div>
+                          <p>
 
+歡慶BunnyFly盛大開幕!</br>
+                       即日起加入成為BunnyFly會員，即獲500元折扣券，不限結帳金額、不限時、全館可立即使用。</br>
+如此好康，快來加入會員，享受有保障、有折扣代購!
+
+</p>
+                        </div>
+                  </div>
+                  <div class="set">
+                        <a href="#">
+                          017.0720 夏日沁涼送，加入會員送500折扣點，立即使用
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>請輸入....</p>
+                        </div>
+                  </div>
+                  <div class="set">
+                        <a href="#">
+                           2017.0720 夏日沁涼送，加入會員送500折扣點，立即使用。 
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>請輸入.....</p>
+                        </div>
+                  </div>
+                   <div class="set">
+                        <a href="#">
+                          2017.07.11 開幕慶歡樂送，加入會員送500折扣券，可立即使用
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>
+
+歡慶BunnyFly盛大開幕!</br>
+                       即日起加入成為BunnyFly會員，即獲500元折扣券，不限結帳金額、不限時、全館可立即使用。</br>
+如此好康，快來加入會員，享受有保障、有折扣代購!
+
+</p>
+                        </div>
+                  </div>
+                   <div class="set">
+                        <a href="#">
+                          2017.07.11 開幕慶歡樂送，加入會員送500折扣券，可立即使用
+                        
+                        <span class="glyphicon glyphicon-chevron-down more"></span>
+                        <p class="more" id="messagebox">...看更多</p>
+                        </a>
+                        <div class="content">
+                          <p>
+
+歡慶BunnyFly盛大開幕!</br>
+                       即日起加入成為BunnyFly會員，即獲500元折扣券，不限結帳金額、不限時、全館可立即使用。</br>
+如此好康，快來加入會員，享受有保障、有折扣代購!
+
+</p>
+                        </div>
+                  </div>
       
       
     
@@ -128,15 +146,21 @@
         </div>
         
 <!--content內容頁面------------------------------->
-<!-- footer ------------------------------------->
-    <div class="footer">
-      &nbsp;&nbsp;&nbsp;客服中心
-      &nbsp;&nbsp;&nbsp;新手上路
-      &nbsp;&nbsp;&nbsp;常見問題
-      &nbsp;&nbsp;&nbsp;聯絡我們
-      &nbsp;&nbsp;&nbsp;賣家進駐申請
-      <br>
-      Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+ <div class="container-fluid4">
+    	<div class="row-fluid">
+   		  <div class="col-md-18">
+          &nbsp;&nbsp;&nbsp;<a href="#">客服中心</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">新手上路</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">常見問題</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">聯絡我們</a>
+          &nbsp;&nbsp;&nbsp;<a href="#">賣家進駐申請</a>
+          <br>
+          <div class="footer-text">
+            Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+          </div>
+    		</div>
+    	</div>
+  </div>
     </div>
 
 </body>
@@ -148,11 +172,13 @@ $(document).ready(function(){
       $(this).removeClass("active");
       $(this).siblings('.content').slideUp(200);
       $(".set > a span").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
-	  document.getElementById("messagebox").innerHTML='...看更多';
+	  $(".set > a p").html('...看更多');
     }else{
-      $(".set > a spam").removeClass("fglyphicon-chevron-up").addClass("glyphicon-chevron-down");
+      $(".set > a span").removeClass("fglyphicon-chevron-up").addClass("glyphicon-chevron-down");
+	  $(".set > a p").html('...看更多');
     $(this).find("span").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
-	document.getElementById("messagebox").innerHTML='...收合';
+	$(this).find("p").html('...收合');
+
     $(".set > a").removeClass("active");
     $(this).addClass("active");
     $('.content').slideUp(200);
