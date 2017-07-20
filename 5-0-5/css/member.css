@@ -19,7 +19,7 @@
 .row-fluid .col-xs-3 button{
   height: 60px;
   border-radius: 15px;
-  background: #9999FF;
+  background: #9295c9;
 }
 .row-fluid .col-xs-2{
   padding-top: 20px;
@@ -31,8 +31,11 @@
   height: 1200px;
   width: 100%;
 }
+.tab-content button{
+  border-radius: 15px;
+}
 .container-fluid1 .col-xs-2{
-  background: #9999FF;
+  background: #9295c9;
   height: 1200px;
   padding-top: 100px;
 }
@@ -81,11 +84,14 @@
 .middle-button1{
   margin-left: 100px;
   border-radius: 10px;
-  background: #9999FF;
+  background: #9295c9;
   height: 40px;
   width: 100px;
 }
 /*訂單管理*/
+#panel2 button{
+  background: #9295c9;
+}
 .panel2-a{
   float: right;
 }
@@ -128,10 +134,153 @@
   border-radius: 15px;
   background: #eee;
 }
+/*商城商品上架button*/
+#panel5 button{
+  background: #9295c9;
+}
+/*商城訂單管理button*/
+#panel6 button{
+  background: #9295c9;
+}
 
 /*商城基本設定*/
+.dropshadow{
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3))
+}
+.banner{
+	width:752px;
+	height:192px;
+}
+.profileImg{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	top: -210px;
+	left:20px;
+	/*圖片切為圓形*/
+	border-radius:50%;
+}
+.profileBackground{
+	position:relative;
+	width:752px;
+	height:100px;
+	background-color: #eeeeee;
+}
+.starrow{
+	position: relative;
+	top: 10px;
+	left: -80px;
+}
 
-
+.shopName{
+	position: relative;
+	top: -50px;
+	left: 200px;
+}
+.location{
+	position: relative;
+	top: -50px;
+	left: 200px;
+}
+.button1{
+	background-color: #9295c9;
+	border-radius: 8px;
+	height: 40px;
+	width: 120px;
+	position: relative;
+	top: -100px;
+	left:600px;
+}
+.button2{
+	background-color: #9295c9;
+	border-radius: 10px;
+	height: 50px;
+	width: 150px;
+	position: relative;
+	top: 70px;
+	left:575px;
+}
+.button3{
+background: rgba(100%,100%,100%,0.5);
+	border-radius: 10px;
+	height: 30px;
+	width: 100px;
+	position: relative;
+	top: -180px;
+	left:640px;
+	border:0px;
+}
+.button4{
+background: rgba(100%,100%,100%,0.3);
+border:0px;
+	position: relative;
+	top: -150px;
+	left:-100px;
+	border:0px;
+	clear:both;
+	width: 115px;
+	   border-radius: 0px 0px 50px 50px;
+    height: 50px;
+}
+.file1{
+		height: 30px;
+	width: 100px;
+	position: relative;
+	top: -180px;
+	left:640px;
+	}
+.buttonTxt1{
+	color:white;
+}
+.buttonTxt2{
+	color:white;
+	font-size: 14pt;
+}
+.buttonTxt3{
+	color:black;
+	font-size: 10pt;
+		height:30px;
+	float:left;
+		margin:5px 5px 5px 8px;
+}
+.buttonTxt4{
+	color:black;
+	font-size: 10pt;
+		height:30px;
+	float:left;
+		margin-left:35px;
+		margin-right:30px
+}
+.inputBox{
+	width:300px;
+	height:30px;
+	border-radius:10px;
+}
+.form{
+	background-color: #eeeeee;
+	border-radius: 10px;
+	height: 50px;
+	width: 712px;
+	position: relative;
+	top:20px;
+	left:20px;
+}
+.formTxt{
+　
+	height:30px;
+	float:left;
+	margin:10px auto 10px 10px;
+}
+.formBackground{
+	background-color: #D4D4D4;
+	border-radius: 10px;
+	height: 310px;
+	width: 752px;
+	position: relative;
+	top: -100px;
+	left:0px;
+}
 .clear{
   clear: both;
 }
