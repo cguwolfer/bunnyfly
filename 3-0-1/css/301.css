@@ -1,5 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
+* {
+font-family: "Microsoft JhengHei";
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
 
 .profile{
 	width:940px;
@@ -124,44 +130,16 @@ border: 0;
 text-decoration: none;
 }
 
-.body {
-font: 13px/180% Arial, Helvetica, sans-serif, "華康儷細黑";
-background: #FFF;
-color:black;
-}
 
-.clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-
-.clearfix {
-	display: inline-table;
-	}
-/* Hides from IE-mac */
-*html .clearfix {
-	height: 1%;
-	}
-
-.clearfix {
-	display: block;
-	}
-/* End hide from IE-mac */
-* + html .clearfix {
-	min-height: 1%;
-	}
 /* hovertreeaction */
 .hovertreeaction {
-	width: 981px;
+	width:1000px;
 	margin: 0px auto ;
 	overflow: hidden;
 	}
 
 .hovertreeaction ul {
-	width: 1280px;
+	width: 1000px;
 	}
 
 .hovertreeaction ul li {
@@ -236,4 +214,12 @@ color: #666;
 .cc2{
     display:inline-block;
 	margin: 0 15px; 
+}
+
+.page {
+	width:100%;
+	margin:45px 39%;
+font-size: 17pt;
+font-family: "Microsoft JhengHei";
+
 }
