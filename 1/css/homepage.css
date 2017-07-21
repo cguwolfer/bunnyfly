@@ -45,8 +45,8 @@ ul.navigation li a{
   background: #eee;
   color: #FFF;
   border-radius: 10px;
-  margin-right: 40px;
-  padding-top: 5px;
+  margin-right: 50px;
+  padding-top: 10px;
 }
 ul.navigation li a span{
   color: #000;
@@ -121,6 +121,11 @@ ul.navigation ul li:hover > ul{
 
 
 /*search欄位*/
+.btn{
+  border-radius: 15px;
+  background: #9295c9;
+  border-style: outset;
+}
 .searchbox{
 	padding-top:80px;
 	margin:40px 50vw;
@@ -158,18 +163,18 @@ ul.navigation ul li:hover > ul{
 }
 
 .container-fluid2{
-  height: 135px;
+  height: 110px;
   background-color: #eee;
   color: #fff;
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
 }
 .container-fluid2 a{
-  color: #969696;
+  color: #000;
 }
 .footer-text{
   font-size: 14px;
-  color: #969696;
+  color: #000;
 }

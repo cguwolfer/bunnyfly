@@ -3,7 +3,6 @@
 }
 
 button {
-    background: #9999FF;
     border-radius: 15px;
 }
 
@@ -13,7 +12,9 @@ button {
   margin: 0 auto;
   background: #eee;
 }
-
+.header a{
+  color: #000;
+}
 .logo {
     width: 140px;
     height: 60px;
@@ -22,6 +23,8 @@ button {
 
 .row-fluid .col-md-3 button {
     height: 60px;
+    background: #eee;
+    border: none;
 }
 
 .row-fluid .col-md-2 {
@@ -57,6 +60,7 @@ button {
 .register-button {
     width: 420px;
     height: 40px;
+    background: #9295c9;
 }
 
 .clearfix {
@@ -66,19 +70,21 @@ button {
 
 /*footer*/
 
-.container-fluid4 {
-  height: 135px;
+.container-fluid4{
+  height: 110px;
   background-color: #eee;
   color: #fff;
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
 }
-
+.container-fluid4 a{
+  color: #000;
+}
 .footer-text {
   font-size: 14px;
-  color: #969696;
+  color: #000;
 }
 
 .errorMessage {

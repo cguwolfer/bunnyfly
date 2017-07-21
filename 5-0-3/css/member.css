@@ -8,6 +8,9 @@
   margin: 0 auto;
   background: #eee;
 }
+.header a{
+  color: #000;
+}
 .logo{
   width: 140px;
   height: 60px;
@@ -16,7 +19,8 @@
 .row-fluid .col-xs-3 button{
   height: 60px;
   border-radius: 15px;
-  background: #9999FF;
+  background: #eee;
+  border: none;
 }
 .row-fluid .col-xs-2{
   padding-top: 20px;
@@ -29,7 +33,7 @@
   width: 100%;
 }
 .container-fluid1 .col-xs-2{
-  background: #9999FF;
+  background: #9295c9;
   height: 1200px;
   padding-top: 100px;
 }
@@ -78,13 +82,17 @@
 .middle-button1{
   margin-left: 100px;
   border-radius: 10px;
-  background: #9999FF;
+  background: #9295c9;
   height: 40px;
   width: 100px;
 }
 /*訂單管理*/
 .panel2-a{
   float: right;
+}
+#panel2 button{
+  border-radius: 15px;
+  background: #9295c9;
 }
 .panel2-nav{
   margin-top: 50px;
@@ -120,15 +128,18 @@
 }
 /*fotter*/
 .container-fluid5{
-  height: 135px;
+  height: 110px;
   background-color: #eee;
   color: #fff;
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
 }
+.container-fluid5 a{
+  color: #000;
+}
 .footer-text{
   font-size: 14px;
-  color: #969696;
+  color: #000;
 }

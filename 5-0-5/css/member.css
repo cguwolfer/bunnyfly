@@ -9,7 +9,7 @@
   background: #eee;
 }
 .header a{
-  color: #969696;
+  color: #000;
 }
 .logo{
   width: 140px;
@@ -19,7 +19,8 @@
 .row-fluid .col-xs-3 button{
   height: 60px;
   border-radius: 15px;
-  background: #9295c9;
+  background: #eee;
+  border: none;
 }
 .row-fluid .col-xs-2{
   padding-top: 20px;
@@ -286,18 +287,18 @@ border:0px;
 }
 /*fotter*/
 .container-fluid5{
-  height: 135px;
+  height: 110px;
   background-color: #eee;
   color: #fff;
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-family: "Microsoft JhengHei";
   line-height: 50px;
 }
 .container-fluid5 a{
-  color: #969696;
+  color: #000;
 }
 .footer-text{
   font-size: 14px;
-  color: #969696;
+  color: #000;
 }
