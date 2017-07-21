@@ -31,22 +31,11 @@ CREATE TABLE product(
 	waitingDays CHAR(30) NULL,
 	productInfo TEXT NULL,
 	Description TEXT NULL,
+	picture MEDIUMBLOB NULL,
 	PRIMARY KEY (productID)
 );
 
-/*
-記錄每個產品的圖片(可能超過1個)
-*/
-CREATE TABLE product_pictures(
-	productID INT NOT NULL,
-	seller_userID INT NOT NULL,
-	pictureIndex INT NOT NULL,
-	picture MEDIUMBLOB NOT NULL,
-	PRIMARY KEY (productID,seller_userID,pictureIndex)
-);
 
-/*
-*/
 CREATE TABLE orders(
 	orderID INT AUTO_INCREMENT NOT NULL,
 	buyer_userID INT NOT NULL,
