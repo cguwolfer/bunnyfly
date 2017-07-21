@@ -1,0 +1,224 @@
+*{
+  font-family: "Microsoft JhengHei";
+  font-weight: bold;
+}
+.header{
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  background: #eee;
+}
+.header a{
+	color: #000;
+}
+.logo{
+  width: 140px;
+  height: 60px;
+  float: right;
+}
+.row-fluid .col-xs-3 button{
+  height: 60px;
+  border-radius: 15px;
+  background: #9999FF;
+}
+.row-fluid .col-xs-2{
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+/* middle */
+.container-fluid1{
+  height: 1200px;
+  width: 100%;
+}
+.container-fluid1 .col-xs-2{
+  background: #9999FF;
+  height: 1200px;
+  padding-top: 100px;
+}
+.col-xs-2 h3{
+  font-weight: bolder;
+}
+.col-xs-8{
+  padding-top: 50px;
+}
+/*大頭照css動畫*/
+.mask-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.mask-inner {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 20%;
+
+    -moz-transition: top ease 200ms;
+    -o-transition: top ease 200ms;
+    -webkit-transition: top ease 200ms;
+    transition: top ease 200ms;
+}
+.mask-wrapper:hover .mask-inner {
+    top: 0;
+}
+#my-mask {
+    width: 250px;
+    height: 250px;
+}
+.panel1-1{
+  float: right;
+  width: 450px;
+  height: 350px;
+  background: #eee;
+  border-radius: 15px;
+}
+.form-horizontal{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.middle-button1{
+  margin-left: 100px;
+  border-radius: 10px;
+  background: #9999FF;
+  height: 40px;
+  width: 100px;
+}
+/*訂單管理*/
+.panel2-a{
+  float: right;
+}
+.panel2-nav{
+  margin-top: 50px;
+  margin-left: 40%;
+}
+.panel3-background{
+  width: 780px;
+  height: 900px;
+  background: #eee;
+  padding-top: 40px;
+  border-radius: 20px;
+}
+.panel3-img{
+  width: 180px;
+  height: 265px;
+  margin-left: 30px;
+  padding-bottom: 30px;
+  line-height: 20px;
+  text-align: center;
+  background: #fff;
+}
+.panel3-2img{
+  width: 180px;
+  height: 265px;
+  margin-left: 30px;
+  text-align: center;
+  background: #bababa;
+}
+
+
+.clear{
+  clear: both;
+}
+/*fotter*/
+.container-fluid5{
+ height: 110px;
+  background-color: #eee;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Microsoft JhengHei";
+  line-height: 50px;
+}
+.container-fluid5 a{
+  color: #000;
+}
+
+.footer-text{
+  font-size: 14px;
+  color: #000;
+}
+
+
+/* box*/
+
+.newsbox{
+	text-align:left;
+	width:65%;
+	margin:80px auto 40px auto;
+}
+
+.menulist{
+	margin:0 auto;
+	width:100%;
+	background: #4c4c4c;
+
+}
+.newstitle{
+	text-align:left;
+	width:65%;
+	margin-left:30px;
+	border-bottom:1px #06F solid;
+}
+.newscontent{
+	padding-top:30px;
+	width:65%;
+	margin-left:30px;
+	
+}
+
+.accordion-heading > a.active{
+  background-color:#3399cc;
+  color: #fff;
+}
+
+.accordion-container{
+  position: relative;
+  height: auto;
+  margin: 20px auto;
+}
+
+.set{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  
+}
+.set > a{
+  display: block;
+  padding: 10px 15px;
+
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+.more{
+  width: 60px;
+  position:relative;
+  float: right;
+  color: #666;
+}
+.set > a.active{
+  background-color:#9295c9;
+  color: #fff;
+}
+
+.content{
+  position:relative;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  display:none;
+}
+.content p{
+  padding: 10px 15px;
+  margin: 0;
+  color: #333;
+}
