@@ -1,464 +1,502 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="generator"
-    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>找人幫你飛/美國</title>
-    <link rel="stylesheet" href="css/3.0table.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="icon" type="image/png" href="img/user.png" />
-  </head>
+    <link rel="stylesheet" href="css/3.0table.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/user.png">
+    <link href="css/pagination.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/pagination.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+
+window.onload=function(){
+	$.ajax({
+ url: "https://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=1&FileType=1&Lang=C&FolderType=",
+ dataType: "json",
+ success: function(jsonObj){
+ // 成功。JSON物件處理作業
+ // （省略）
+ 	console.log(jsonObj);
+	console.log(typeof(jsonObj));
+	function createDemo(name) {
+            var container = $('#pagination-' + name);
+            var sources = function () {
+                var result = [];
+
+                for (var i = 1; i < jsonObj.length; i++) {
+                    result.push(i);
+                }
+
+                return result;
+            }();
+
+            var options = {
+                dataSource: sources,
+                callback: function (response, pagination) {
+                    window.console && console.log(response, pagination);
+
+                    var str="";
+
+                    $.each(response, function (index, item) {
+                        str=str+
+						'<div class="box">'+
+						'<div class="photo">'+
+						'<a href=""><img src="img/220.jpg" ></a></div>' +
+						'<div class="photo2"><a href=""><img width=100px height=100px src="'+jsonObj[item].Picture1+'"></a></div>'+
+						'<div class="start">'+
+						'<img src="img/評價全星.png" alt="" width="16" height="15">'+
+						'<img src="img/評價全星.png" alt="" width="16" height="15">'+
+						'<img src="img/評價全星.png" alt="" width="16" height="15">'+
+						'<img src="img/評價全星.png" alt="" width="16" height="15">'+
+						'<img src="img/評價全星.png" alt="" width="16" height="15">'+
+						'</div>'+
+
+						'<div class= "box-text">'+jsonObj[item].Name+'</div>'+
+						'<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp'+jsonObj[item].Name+'</div>'+
+
+						'</div>'
+						;
+                    });
+
+
+
+                    $("#posList").html(str);
+                }
+            };
+
+            //$.pagination(container, options);
+
+            container.addHook('beforeInit', function () {
+                window.console && console.log('beforeInit...');
+            });
+            container.pagination(options);
+
+            container.addHook('beforePageOnClick', function () {
+                window.console && console.log('beforePageOnClick...');
+                //return false
+            });
+
+            return container;
+        }
+
+        createDemo('demo1');
+
+
+
+
+ },
+ error:function(xhr, ajaxOptions, thrownError){
+ // 錯誤。錯誤訊息處理
+ alert(xhr.status);
+ alert(thrownError);
+ }
+})
+
+
+}
+
+
+</script>
+
+
+
+
+</head>
   <body>
-  <!-- header -->
-  <div class="header">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="col-md-3">
-          <a href="../1/Homepage.html">
-            <img class="logo" src="img/logo.png" alt="logo" />
-          </a>
-        </div>
-        <div class="col-md-2">
-          <a href="../2/2-0.html">最新消息/活動</a>
-        </div>
-        <div class="col-md-2">
-          <a href="../3/3-0.html">找人幫你飛</a>
-        </div>
-        <div class="col-md-2">
-          <a href="../5/5-0.html">會員專區</a>
-        </div>
-        <div class="col-md-3">
-          <button type="button" name="button">
-          <img src="img/user.png" alt="login" /> 
-          <span>登入/加入Bunny</span></button>
+   <!-- header -->
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="col-md-3">
+            <a href="../1/Homepage.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+          </div>
+          <div class="col-md-2">
+            <a href="../2/2-0.html">最新消息/活動</a>
+          </div>
+          <div class="col-md-2">
+            <a href="../3/3-0.html">找人幫你飛</a>
+          </div>
+          <div class="col-md-2">
+            <a href="../5/5-0.html">會員專區</a>
+          </div>
+          <div class="col-md-3">
+            <button type="button" name="button">
+              <img src="img/user.png" alt="login">
+              <span>登入/加入Bunny</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <!-- top-text -->
+
+
+
+  <div class="container"><!--container有自適應屬性-->
+
+            <div class="newsbox">
+       	    	<a href="#">首頁</a>><a href="#">找人幫你飛</a><a href="#">>美國</a>
+            </div>
+
+
+
+         	<div class="newstitle">
+            	美國
+         	</div>
+
+
+	  </div>
+
+    <!-- middle -->
+
+
+
+
+    <div class="content" id="posList">
+
+   <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+   <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+    <div class="box">
+
+	   <div class="photo"><a href=""><img src="img/220.jpg" ></a></div>
+
+   	<div class="photo2"><a href=""><img src="img/100.jpg" ></a></div>
+
+   	<div class="start">
+   		<img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+        <img src="img/評價全星.png" alt="" width="16" height="15">
+   	</div>
+
+   	<div class= "box-text">PENTA SOP 全球代購</div>
+   	<div class="box-text2"><img src="img/123.png" width="8" height="11">&nbsp;&nbsp;&nbsp 美國、英國</div>
+
+   </div>
+
+
+
+
+
   </div>
-  <!-- top-text -->
-  <div class="container">
-    <!--container有自適應屬性-->
-    <div class="newsbox">
-    <a href="#">首頁</a>&gt;
-    <a href="#">找人幫你飛</a>
-    <a href="#">&gt;美國</a></div>
-    <div class="newstitle">美國</div>
-  </div>
-  <!-- middle -->
-  <div class="content">
-    <div class="box">
-      <div class="photo">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="../3-1-1/3-1-1.html">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-    <div class="box">
-      <div class="photo">
-        <a href="">
-          <img src="img/220.jpg" />
-        </a>
-      </div>
-      <div class="photo2">
-        <a href="">
-          <img src="img/100.jpg" />
-        </a>
-      </div>
-      <div class="start">
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16" height="15" /> 
-      <img src="img/%C3%A8%C2%A9%C2%95%C3%A5%C2%83%C2%B9%C3%A5%C2%85%C2%A8%C3%A6%C2%98%C2%9F.png" alt="" width="16"
-      height="15" /></div>
-      <div class="box-text">PENTA SOP 全球代購</div>
-      <div class="box-text2">
-      <img src="img/123.png" width="8" height="11" />��� 美國、英國</div>
-    </div>
-  </div>
+
   <div class="page">
-    <ul>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">|&lt; pre</a>
-        </font>
-      </li>
-      <li style="list-style: none"></li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">1</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">2</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">3</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">4</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">5</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">6</a>
-        </font>
-      </li>
-      <li class="cc2">
-        <font onmouseover="this.color=&#39;#3399CC&#39;" onmouseout="this.color=&#39;000000&#39;">
-          <a href="">next &gt;|</a>
-        </font>
-      </li>
-    </ul>
-  </div>
-  <!-- footer -->
-  <div class="container-fluid4">
-    <div class="row-fluid">
-      <div class="col-md-18">���
-      <a href="#">客服中心</a> ���
-      <a href="#">新手上路</a> ���
-      <a href="#">常見問題</a> ���
-      <a href="#">聯絡我們</a> ���
-      <a href="#">賣家進駐申請</a>
-      <br />
-      <div class="footer-text">Copyright��2017�BunnyFly科技股份有限公司�All Rights Reserved.</div></div>
+
+    <section>
+        <div id="pagination-demo1"></div>
+    </section>
+
+	</div>
+
+
+
+    <!-- footer -->
+    <div class="container-fluid3">
+      <div class="row-fluid">
+        <div class="col-xs-12">
+          &nbsp;&nbsp;<a href="../6-0/6-0.html#panel1">客服中心</a>
+          &nbsp;&nbsp;<a href="../6-0/6-0.html#panel2">新手上路</a>
+          &nbsp;&nbsp;<a href="../6-0/6-0.html#panel1">常見問題</a>
+          &nbsp;&nbsp;<a href="../6-0/6-0.html#panel3">聯絡我們</a>
+          &nbsp;&nbsp;<a href="../7/7.html">賣家進駐申請</a>
+          <br>
+          <div class="footer-text">
+            Copyright&copy;&nbsp;2017&nbsp;BunnyFly科技股份有限公司&nbsp;All Rights Reserved.
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-  <script src="js/jquery-3.2.1.min.js"></script> 
-  <script src="js/bootstrap.min.js"></script></body>
+  </body>
 </html>

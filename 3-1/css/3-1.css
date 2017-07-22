@@ -5,6 +5,7 @@ font-family: "Microsoft JhengHei";
 margin: 0;
 padding: 0;
 list-style-type: none;
+font-weight: bold;
 }
 button{
   border-radius: 15px;
@@ -118,8 +119,8 @@ color: #666;
 
     list-style: none;
 	text-align: left;
- 
-	margin-top:60px; 
+
+	margin-top:60px;
 	margin-left:220px;
   }
 .ss2 {
@@ -133,7 +134,7 @@ color: #666;
 }
 .cc2{
     display:inline-block;
-	margin: 0 15px; 
+	margin: 0 15px;
 }
 
 /*fotter*/

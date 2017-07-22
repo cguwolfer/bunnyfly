@@ -282,6 +282,11 @@ border:0px;
 	top: -100px;
 	left:0px;
 }
+/*行銷活動*/
+#panel7 .col-xs-6{
+  padding-top: 80px;
+  padding-left: 5%;
+}
 .clear{
   clear: both;
 }
