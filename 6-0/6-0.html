@@ -43,16 +43,16 @@
           <hr />
             <!-- Nav tabs -->
             <ul class="nav nav-tabs nav-stacked">
-              <li class="active"><a href="#panel1" data-toggle="tab">Q&A</a></li>
-              <li><a href="#panel2" data-toggle="tab">新手上路</a></li>
-              <li><a href="#panel3" data-toggle="tab">聯絡我們</a></li>
+              <li id="tab1"><a href="#panel1" data-toggle="tab">Q&A</a></li>
+              <li id="tab2"><a href="#panel2" data-toggle="tab">新手上路</a></li>
+              <li id="tab3"><a href="#panel3" data-toggle="tab">聯絡我們</a></li>
             </ul>
           </div>
 
 
     	<div class="col-xs-8">
         <div class="tab-content">
-    			<div class="tab-pane active" id="panel1">
+    			<div class="tab-pane" id="panel1">
                	  <div class="newstitle"> <img src="" alt="" />
     	                <h3 >Q&A </h3>
                   </div>
@@ -213,5 +213,18 @@ $(document).ready(function(){
     }
 
   });
+	var path = window.location.href;
+	if( path.search( "panel1" ) != -1 ) {
+		$("#panel1").addClass("active");
+		$("#tab1").addClass("active");
+	}
+	if( path.search( "panel2" ) != -1 ){
+		$("#panel2").addClass("active");
+		$("#tab2").addClass("active");
+	}
+	if( path.search( "panel3" ) != -1 ){
+		$("#tab3").addClass("active");
+		$("#panel3").addClass("active");
+	}
 });
 </script>
