@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/1-0.js"></script>
+
+    <link rel="stylesheet" href="css/booNavigation.css">
 
 </head>
 
@@ -33,62 +34,76 @@
          		<div class="collapse navbar-collapse menulist col-xs-12" id="myNavbar">
 
             <!--底下放要縮放的內容-->
-                <ul class="navigation">
-                  <li><a href="../2/2-0.html"><span>最新消息/活動</span></a></li>
-                  <li>
-                    <a href="../3/3-0.html"><span>找人幫你飛</span></a>
-                    <ul>
-                      <li><a href="#"><span>依國家尋找產品</span></a>
-                        <ul>
-                          <li><a href="../3/3-0.html?country=1">日本</a></li>
-                          <li><a href="../3/3-0.html?country=2">韓國</a></li>
-                          <li><a href="../3/3-0.html?country=3">泰國</a></li>
-                          <li><a href="../3/3-0.html?country=4">香港</a></li>
-                          <li><a href="../3/3-0.html?country=5">法國</a></li>
-                          <li><a href="../3/3-0.html?country=6">美國</a></li>
-                          <li><a href="../3/3-0.html?country=7">英國</a></li>
-                          <li><a href="../3/3-0.html?country=8">西班牙</a></li>
-                          <li><a href="../3/3-0.html?country=9">其他</a></li>
-                        </ul>
+            <div class="wrapper">
+              <nav id="booNavigation" class="booNavigation">
+                  <ul>
+                      <li class="navItem">
+                      <a href="#" title="First Item">最新消息/活動</a>
+                    </li>
+                      <li class="navItem">
+                          <a href="#" title="First Item">找人幫你飛</a>
+                          <ul class="navContent">
+                              <li>
+                                  <ul>
+                                      <li><a href="#" title="Boo the cat">依國家尋找產品</a></li>
+                                      <hr />
+                                      <li><a href="../3/3-0.html?country=1">日本</a></li>
+                                      <li><a href="../3/3-0.html?country=2">韓國</a></li>
+                                      <li><a href="../3/3-0.html?country=3">泰國</a></li>
+                                      <li><a href="../3/3-0.html?country=4">香港</a></li>
+                                      <li><a href="../3/3-0.html?country=5">法國</a></li>
+                                      <li><a href="../3/3-0.html?country=6">美國</a></li>
+                                      <li><a href="../3/3-0.html?country=7">英國</a></li>
+                                      <li><a href="../3/3-0.html?country=8">西班牙</a></li>
+                                      <li><a href="../3/3-0.html?country=9">其他</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <ul>
+                                      <li><a href="#" title="Pictures of Boo">依類別尋找產品</a></li>
+                                      <hr />
+                                      <li><a href="../3-1/3-1.html?category=1">名牌精品</a></li>
+                                      <li><a href="../3-1/3-1.html?category=2">流行服飾</a></li>
+                                      <li><a href="../3-1/3-1.html?category=3">美妝保樣</a></li>
+                                      <li><a href="../3-1/3-1.html?category=4">運動休閒</a></li>
+                                      <li><a href="../3-1/3-1.html?category=5">居家生活</a></li>
+                                      <li><a href="../3-1/3-1.html?category=6">異國美食</a></li>
+                                      <li><a href="../3-1/3-1.html?category=7">3C家電</a></li>
+                                      <li><a href="../3-1/3-1.html?category=8">寵物用品</a></li>
+                                      <li><a href="../3-1/3-1.html?category=9">媽咪寶貝</a></li>
+                                      <li><a href="../3-1/3-1.html?category=10">其他</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <ul>
+                                      <li><a href="#" title="The amazing cat">依國家尋找商城</a></li>
+                                      <hr />
+                                      <li><a href="../3/3-0.html">日本</a></li>
+                                      <li><a href="../3/3-0.html">韓國</a></li>
+                                      <li><a href="../3/3-0.html">泰國</a></li>
+                                      <li><a href="../3/3-0.html">香港</a></li>
+                                      <li><a href="../3/3-0.html">法國</a></li>
+                                      <li><a href="../3/3-0.html">美國</a></li>
+                                      <li><a href="../3/3-0.html">英國</a></li>
+                                      <li><a href="../3/3-0.html">西班牙</a></li>
+                                      <li><a href="../3/3-0.html">其他</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
                       </li>
-                      <li><a href="#">依類別尋找產品</a>
-                        <ul>
-                          <li><a href="../3-1/3-1.html?category=1">名牌精品</a></li>
-                          <li><a href="../3-1/3-1.html?category=2">流行服飾</a></li>
-                          <li><a href="../3-1/3-1.html?category=3">美妝保樣</a></li>
-                          <li><a href="../3-1/3-1.html?category=4">運動休閒</a></li>
-                          <li><a href="../3-1/3-1.html?category=5">居家生活</a></li>
-                          <li><a href="../3-1/3-1.html?category=6">異國美食</a></li>
-                          <li><a href="../3-1/3-1.html?category=7">3C家電</a></li>
-                          <li><a href="../3-1/3-1.html?category=8">寵物用品</a></li>
-                          <li><a href="../3-1/3-1.html?category=9">媽咪寶貝</a></li>
-                          <li><a href="../3-1/3-1.html?category=10">其他</a></li>
-                        </ul>
+                      <li class="navItem">
+                          <a href="#" title="First Item">會員專區</a>
                       </li>
-                      <li><a href="#">依國家尋找商城</a>
-                        <ul>
-                          <li><a href="../3/3-0.html">日本</a></li>
-                          <li><a href="../3/3-0.html">韓國</a></li>
-                          <li><a href="../3/3-0.html">泰國</a></li>
-                          <li><a href="../3/3-0.html">香港</a></li>
-                          <li><a href="../3/3-0.html">法國</a></li>
-                          <li><a href="../3/3-0.html">美國</a></li>
-                          <li><a href="../3/3-0.html">英國</a></li>
-                          <li><a href="../3/3-0.html">西班牙</a></li>
-                          <li><a href="../3/3-0.html">其他</a></li>
-                        </ul>
+                      <li class="navItem">
+                          <a class="nav-text" href="#">
+                            <img src="img/user.png" alt="">
+                            <span>登入/加入Bunny</span>
+                          </a>
                       </li>
                     </ul>
-                  </li>
-                  <li><a href="../5/5-0.html"><span>會員專區</span></a></li>
-                  <li>
-                    <a class="nav-text" style="color:#fff;" href="#">
-                      <img src="img/user.png" alt="">
-                      <span>登入/加入Bunny</span>
-                    </a>
-                  </li>
-                </ul>
-               </div>
+                  </nav>
+                </div>
+              </div>
   <!--以上要縮放的內容-->
          </div>
    </div>
@@ -224,7 +239,26 @@
     </div>
   </div>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/booNavigation.js"></script>
+  <script>
+  (function() {
 
+      /**
+       * This is the call we have to do to execute
+       * the plugin giving a custom params
+       */
+      $('#booNavigation').booNavigation({
+          slideSpeed: 50
+      });
+
+      $('#booNavigationTwo').booNavigation({
+          slideSpeed: 50
+      });
+
+  })();
+
+  </script>
 
 
 </body>
