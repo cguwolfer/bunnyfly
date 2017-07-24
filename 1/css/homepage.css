@@ -58,7 +58,7 @@ ul.navigation li a span{
 }*/
 ul.navigation > li > a:hover{
   color: #666;
-  background: #DDD
+  background: #9295c9;
 }
 /* 特定在第一層 > 第二層或以後下拉部分之樣式 */
 ul.navigation ul{
@@ -85,10 +85,10 @@ ul.navigation ul a {
   width: 150px;
   padding: 10px 12px;
   color: #666;
-  background: #EEE;
+  background: #9295c9;
 }
 ul.navigation ul a:hover {
-  background: #CCC;
+  background: #9295c9;
 }
 /* 第三層之後，上一層的選單觸發則顯示出來（皆為橫向拓展） */
 ul.navigation ul li:hover > ul{
@@ -160,6 +160,9 @@ ul.navigation ul li:hover > ul{
 }
 .bottom .bot1{
   padding-top: 50px;
+}
+.clear{
+  clear: both;
 }
 
 .container-fluid2{
