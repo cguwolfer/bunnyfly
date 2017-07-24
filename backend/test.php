@@ -1,5 +1,5 @@
 <?php
-		
+	
 	/*
 	require_once "meekrodb.2.3.class.php";
 	
@@ -88,16 +88,28 @@
 							
 							if( false !== ($result = file($new_path) ) ){
 								
-								foreach ($result as $value) {
-									echo $value."<br>";
+								foreach ($result as $key=>$value) {
+									
+									// echo $value."<br>";
 									
 									//get NT$
 									if( strstr( $value, "NT$" ) ){
 										
+										echo $value."<br>";
 										// $str = 'In My Cart : 11 12 items';
 										preg_match_all('!\d+!', $value, $matches);
-										print($matches[0][0]);
+										// print($matches[0][0]);
 										
+										$price = intval($matches[0][0]);
+										printf("Price:%d"."<br>", intval($matches[0][0]) );
+										
+										continue;
+									}
+									if( strpos( $value ,"商品品牌") ){
+										echo $value."<br>";
+										// strtok($value, ":");
+										// $brand = strtok(":");
+										// printf("Brand=%s"."<br>", $brand );
 									}
 								}
 							}
