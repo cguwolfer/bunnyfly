@@ -22,7 +22,7 @@ CREATE TABLE account(
 CREATE TABLE product(
 	productID INT AUTO_INCREMENT NOT NULL,
 	seller_userID INT NOT NULL,
-	produceName CHAR(40) NULL,
+	productName CHAR(40) NULL,
 	country ENUM('1','2','3','4','5','6','7','8','9') NOT NULL,
 	catalog ENUM('1','2','3','4','5','6','7','8','9','10') NOT NULL,
 	price NUMERIC(10, 2) NOT NULL,

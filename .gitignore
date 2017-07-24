@@ -5,3 +5,4 @@
 php_library/db_connection.php
 6-0/img/Thumbs.db
 6-0/img/Thumbs.db
+backend/products/*

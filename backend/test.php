@@ -1,0 +1,114 @@
+<?php
+		
+	/*
+	require_once "meekrodb.2.3.class.php";
+	
+	DB::$user = 'root';
+	DB::$password = 'mysql';
+	DB::$dbName = 'bunny2';
+	DB::$encoding = 'utf8';
+	
+	$login_account=$_POST["user_account"];
+	$login_passwd=$_POST["user_password"];
+	
+	$member_system="member_system.html";
+	$index_html="index.html";
+	
+	// echo $login_account;
+	// echo $login_passwd;
+	
+	$results = DB::query("SELECT * FROM another WHERE user_account = %s", $login_account);
+	foreach ($results as $row) {
+		
+		if( $row['user_account'] == $login_account ){
+			
+			if( $row['user_password'] == $login_passwd ){
+				
+				//success
+				
+				//session
+				session_start();
+				$_SESSION["user_account"]=$login_account;
+				$_SESSION["user_password"]=$login_passwd;
+				
+				header("location:".$member_system);
+				
+				exit();
+			}
+		}
+	}
+	
+	//fail
+	header("location:".$index_html."?"."login_error=登入錯誤");
+	// echo $login_account;
+	// echo $login_passwd;
+	// echo "user_name: " . $row['user_name'] . "<br>";
+	// echo "user_account: " . $row['user_account'] . "<br>";
+	// echo "user_password: " . $row['user_password'] . "<br>";
+	// echo "user_email: " . $row['user_email'] . "<br>";
+	// echo "user_address: " . $row['user_address'] . "<br>";
+	// echo "-------------<br>";
+	*/
+	
+	// phpinfo();
+	
+	print("TEST<br>");
+	
+	$br="<br>";
+	$dir    = './products';
+	// $files1 = scandir($dir);
+	// $files2 = scandir($dir, 1);
+
+	// print_r($files1);
+	// print("<br>");
+	// print_r($files2);
+	// print("<br>");
+	
+	iter_dir($dir);
+	
+	function iter_dir( $dir ){
+		
+		if ($handle = opendir($dir)) {
+
+			while (false !== ($entry = readdir($handle))) {
+
+				if ($entry != "." && $entry != "..") {
+					
+					$new_path = $dir."/". $entry;
+					
+					if( is_dir( $new_path) ){	//is dir
+						
+						iter_dir( $new_path );
+					}
+					else{	//is file
+						
+						echo $new_path."<br>";
+						
+						if( strstr( $new_path, "txt") ){
+							
+							if( false !== ($result = file($new_path) ) ){
+								
+								foreach ($result as $value) {
+									echo $value."<br>";
+									
+									//get NT$
+									if( strstr( $value, "NT$" ) ){
+										
+										// $str = 'In My Cart : 11 12 items';
+										preg_match_all('!\d+!', $value, $matches);
+										print($matches[0][0]);
+										
+									}
+								}
+							}
+						}
+						
+					}
+				}
+			}
+
+			closedir($handle);
+		}
+	}
+	
+?>
