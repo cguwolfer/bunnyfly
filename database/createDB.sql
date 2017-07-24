@@ -11,10 +11,10 @@ CREATE TABLE account(
 	userPicture MEDIUMBLOB NULL,
 	mallPicture MEDIUMBLOB NULL,
 	mallDescription VARCHAR(300) NULL,
-	address VARCHAR(50) NOT NULL,
-	countrys SET('1','2','3','4','5','6','7','8','9') NOT NULL,
-	payments SET('1','2') NOT NULL,
-	deliverys SET('1','2') NOT NULL,
+	address VARCHAR(50) NULL,
+	countrys SET('1','2','3','4','5','6','7','8','9') NULL,
+	payments SET('1','2') NULL,
+	deliverys SET('1','2') NULL,
 	PRIMARY KEY (userID)
 );
 
