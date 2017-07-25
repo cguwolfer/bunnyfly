@@ -97,9 +97,8 @@ ul li{
   font-size: 14px;
   color: #000;
 }
-<!---------grid------>
 
-
+/*---------grid--------*/
 	.grid-item div {
 	  display: flex;
 	  color: #fff;
@@ -127,38 +126,39 @@ ul li{
 	height: 100%;
 	position: absolute;
 	bottom: -400px;
+  font-size: 18px;
 }
 
 	.one{
-	  
+
 	 float:left;
 	 margin-left:2%;
 	 margin-right: 2%;
 	}
 	.one img{
-	
+
 	width:300px;
 	height:300px;
 	}
 
 	.two{
-		
+
 
 	  float:right;
 	  margin-bottom:45px;
 	  margin-right: 1%;
 	  margin-left:1%;
 
-	  
-	
+
+
 	}
 	.two img{
 
-	  
-	  
+
+
 	  width:300px;
 	  height:220px;
-	
+
 	}
 
 	.three{
@@ -169,10 +169,10 @@ ul li{
 	}
 	.three img{
 
-	  
+
 	  width:300px;
 	  height:240px;
-	  
+
 
 	}
 
@@ -182,28 +182,28 @@ ul li{
 	 margin-left:2%;
 	 margin-right: 2%;
 	 margin-top: 45px;
-	 
+
 	}
 	.four img{
 
-	  
+
 	  width:300px;
 	  height:195px;
-	
+
 	}
 	.five{
 
 	  float:right;
 	 margin-left:1%;
 	 margin-right: 1%;
-	
+
 	}
 	.five img{
 
-	  
+
 	  width:300px;
 	  height:275px;
-	
+
 	}
 	.six{
 
@@ -215,46 +215,46 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	  width:300px;
 	  height:240px;
-	  
-	
+
+
 	}
 
 
 
 @media screen and (max-width: 1200px) {
 	.one{
-	  
+
 	 float:left;
 	 margin-left:2%;
 	 margin-right: 2%;
 	}
 	.one img{
-	
+
 	width:240px;
 	height:240px;
 	}
 
 	.two{
-		
+
 
 	  float:right;
 	  margin-bottom:45px;
 	  margin-right: 3%;
 	  margin-left:3%;
 
-	  
-	
+
+
 	}
 	.two img{
 
-	  
-	  
+
+
 	  width:240px;
 	  height:176px;
-	
+
 	}
 
 	.three{
@@ -265,10 +265,10 @@ ul li{
 	}
 	.three img{
 
-	  
+
 	  width:240px;
 	  height:200px;
-	  
+
 
 	}
 
@@ -278,28 +278,28 @@ ul li{
 	 margin-left:2%;
 	 margin-right: 2%;
 	 margin-top: 45px;
-	 
+
 	}
 	.four img{
 
-	  
+
 	  width:240px;
 	  height:156px;
-	
+
 	}
 	.five{
 
 	  float:right;
 	 margin-left:3%;
 	 margin-right: 3%;
-	
+
 	}
 	.five img{
 
-	  
+
 	  width:240px;
 	  height:220px;
-	
+
 	}
 	.six{
 
@@ -311,11 +311,11 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	  width:240px;
 	  height:200px;
-	  
-	
+
+
 	}
 }
 
@@ -329,35 +329,35 @@ ul li{
 	  padding-top: 25px;
 	}
 	.one{
-	  
+
 	 float:left;
 	 margin-left:4%;
 
 	}
 	.one img{
-	
+
 	width:300px;
 	height:300px;
 	}
 
 	.two{
-		
+
 
 	  float:right;
 	  margin-bottom:25px;
 	  margin-right: 4%;
-	
 
-	  
-	
+
+
+
 	}
 	.two img{
 
-	  
-	  
+
+
 	  width:300px;
 	  height:220px;
-	
+
 	}
 
 	.three{
@@ -367,10 +367,10 @@ ul li{
 	}
 	.three img{
 
-	  
+
 	  width:300px;
 	  height:250px;
-	  
+
 
 	}
 
@@ -379,27 +379,27 @@ ul li{
 	 float:left;
 	 margin-left:4%;
 	 margin-top: 25px;
-	 
+
 	}
 	.four img{
 
-	  
+
 	  width:300px;
 	  height:195px;
-	
+
 	}
 	.five{
 
 	  float:right;
 	 margin-right: 4%;
-	
+
 	}
 	.five img{
 
-	  
+
 	  width:300px;
 	  height:275px;
-	
+
 	}
 	.six{
 
@@ -410,11 +410,11 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	  width:300px;
 	  height:250px;
-	  
-	
+
+
 	}
 
 
@@ -435,28 +435,28 @@ ul li{
 	  padding-top: 5px;
 	}
 	.one{
-	  
+
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 20%;
 
 	}
 	.one img{
-	
+
 	width:350px;
 	height:350px;
 	}
 
 	.two{
-		
+
 
 	  float:left;
 	  margin-top: 25px;
 	  margin-left: 20%;
-	
 
-	  
-	
+
+
+
 	}
 	.two img{
 	width:350px;
@@ -481,7 +481,7 @@ ul li{
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 20%;
-	 
+
 	}
 	.four img{
 
@@ -497,10 +497,10 @@ ul li{
 	}
 	.five img{
 
-	  
+
 	width:350px;
 	height:350px;
-	
+
 	}
 	.six{
 
@@ -514,11 +514,11 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	width:350px;
 	height:350px;
-	  
-	
+
+
 	}
 
 }
@@ -536,28 +536,28 @@ ul li{
 	  padding-top: 5px;
 	}
 	.one{
-	  
+
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 15%;
 
 	}
 	.one img{
-	
+
 	width:350px;
 	height:350px;
 	}
 
 	.two{
-		
+
 
 	  float:left;
 	  margin-top: 25px;
 	  margin-left: 15%;
-	
 
-	  
-	
+
+
+
 	}
 	.two img{
 	width:350px;
@@ -582,7 +582,7 @@ ul li{
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 15%;
-	 
+
 	}
 	.four img{
 
@@ -598,10 +598,10 @@ ul li{
 	}
 	.five img{
 
-	  
+
 	width:350px;
 	height:350px;
-	
+
 	}
 	.six{
 
@@ -613,11 +613,11 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	width:350px;
 	height:350px;
-	  
-	
+
+
 	}
 
 }
@@ -635,28 +635,28 @@ ul li{
 	  padding-top: 5px;
 	}
 	.one{
-	  
+
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 7.5%;
 
 	}
 	.one img{
-	
+
 	width:350px;
 	height:350px;
 	}
 
 	.two{
-		
+
 
 	  float:left;
 	  margin-top: 25px;
 	  margin-left: 7.5%;
-	
 
-	  
-	
+
+
+
 	}
 	.two img{
 	width:350px;
@@ -681,7 +681,7 @@ ul li{
 	 float:left;
 	 margin-top: 25px;
 	 margin-left: 7.5%;
-	 
+
 	}
 	.four img{
 
@@ -697,10 +697,10 @@ ul li{
 	}
 	.five img{
 
-	  
+
 	width:350px;
 	height:350px;
-	
+
 	}
 	.six{
 
@@ -712,11 +712,11 @@ ul li{
 	}
 	.six img{
 
-	  
+
 	width:350px;
 	height:350px;
-	  
-	
+
+
 	}
 
 }
