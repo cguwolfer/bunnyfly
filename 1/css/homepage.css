@@ -67,9 +67,6 @@ ul li{
 .img{
   width: 100%;
 }
-.container{
-	margin-bottom:50px;
-}
 .bottom{
   width:90%;
   margin: 100px auto;
@@ -98,7 +95,8 @@ ul li{
   color: #000;
 }
 
-/*---------grid--------*/
+/*grid*/
+
 	.grid-item div {
 	  display: flex;
 	  color: #fff;
