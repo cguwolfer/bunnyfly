@@ -32,6 +32,7 @@ CREATE TABLE product(
 	productInfo TEXT NULL,
 	Description TEXT NULL,
 	picture MEDIUMBLOB NULL,
+	picture2 MEDIUMBLOB NULL,
 	PRIMARY KEY (productID)
 );
 
