@@ -1,4 +1,15 @@
 
+	.grid-container {
+	  margin:0px auto;
+	  height: 80vh;
+	  display: grid;
+	  grid-template-columns: auto;
+	  grid-template-rows: auto;
+	  grid-template-areas: "one one two two three three"
+											   "four four five five six six";
+	  grid-column-gap: 10px;
+	  grid-row-gap: 10px;
+	}
 
 	.grid-item div {
 	  display: flex;
@@ -8,8 +19,8 @@
 	  align-items: center;
 	}
 	.grid-ani{
-		width: auto;
-		height: auto;
+		width: 300px;
+		height: 300px;
 		position: relative;
 		overflow: hidden;
 	}
@@ -29,195 +40,55 @@
 	bottom: -400px;
 }
 
-	.one{
-	  
-	 float:left;
-	 margin-left:2%;
-	 margin-right: 2%;
-	}
-	.one img{
-	
-	width:300px;
-	height:300px;
+	.one {
+
+	  grid-area: one;
 	}
 
-	.two{
-		
+	.two {
 
-	  float:right;
-	  margin-bottom:45px;
-	  margin-right: 1%;
-	  margin-left:1%;
-
-	  
-	
-	}
-	.two img{
-
-	  
-	  
-	  width:300px;
-	  height:220px;
-	
+	  grid-area: two;
 	}
 
-	.three{
+	.three {
 
-	  float:right;
-	 margin-left:2%;
-	 margin-right: 2%;
-	}
-	.three img{
-
-	  
-	  width:300px;
-	  height:240px;
-	  
-
+	  grid-area: three;
 	}
 
-	.four{
+	.four {
 
-	 float:left;
-	 margin-left:2%;
-	 margin-right: 2%;
-	 margin-top: 45px;
-	 
+	  grid-area: four;
 	}
-	.four img{
+	.five {
 
-	  
-	  width:300px;
-	  height:195px;
-	
+	  grid-area: five;
 	}
-	.five{
+	.six {
 
-	  float:right;
-	 margin-left:1%;
-	 margin-right: 1%;
-	
-	}
-	.five img{
-
-	  
-	  width:300px;
-	  height:275px;
-	
-	}
-	.six{
-
-	  float:right;
-	  margin-top: 40px;
-	  margin-left:2%;
-	 margin-right: 2%;
-
-	}
-	.six img{
-
-	  
-	  width:300px;
-	  height:240px;
-	  
-	
+	  grid-area: six;
 	}
 
 
 
 @media screen and (max-width: 1200px) {
-	.one{
-	  
-	 float:left;
-	 margin-left:2%;
-	 margin-right: 2%;
-	}
-	.one img{
-	
-	width:240px;
-	height:240px;
-	}
 
-	.two{
-		
+    	.grid-container {
 
-	  float:right;
-	  margin-bottom:45px;
-	  margin-right: 3%;
-	  margin-left:3%;
+	  margin:0px auto;
 
-	  
-	
-	}
-	.two img{
-
-	  
-	  
-	  width:240px;
-	  height:176px;
-	
+	  height: 70vh;
+	  display: grid;
+	  grid-template-columns: auto;
+	  grid-template-rows: auto;
+	  grid-template-areas: "one one two two three three"
+											   "four four five five six six";
+	  grid-column-gap: 10px;
+	  grid-row-gap: 10px;
 	}
 
-	.three{
 
-	  float:right;
-	 margin-left:2%;
-	 margin-right: 2%;
-	}
-	.three img{
-
-	  
-	  width:240px;
-	  height:200px;
-	  
-
-	}
-
-	.four{
-
-	 float:left;
-	 margin-left:2%;
-	 margin-right: 2%;
-	 margin-top: 45px;
-	 
-	}
-	.four img{
-
-	  
-	  width:240px;
-	  height:156px;
-	
-	}
-	.five{
-
-	  float:right;
-	 margin-left:3%;
-	 margin-right: 3%;
-	
-	}
-	.five img{
-
-	  
-	  width:240px;
-	  height:220px;
-	
-	}
-	.six{
-
-	  float:right;
-	  margin-top: 25px;
-	  margin-left:2%;
-	 margin-right: 2%;
-
-	}
-	.six img{
-
-	  
-	  width:240px;
-	  height:200px;
-	  
-	
-	}
 }
+
 
 
 
@@ -228,100 +99,30 @@
 	.bottom .bot1{
 	  padding-top: 25px;
 	}
-	.one{
-	  
-	 float:left;
-	 margin-left:4%;
-
-	}
-	.one img{
-	
-	width:300px;
-	height:300px;
-	}
-
-	.two{
-		
-
-	  float:right;
-	  margin-bottom:25px;
-	  margin-right: 4%;
-	
-
-	  
-	
-	}
-	.two img{
-
-	  
-	  
-	  width:300px;
-	  height:220px;
-	
-	}
-
-	.three{
-	 float:right;
-	 margin-right: 4%;
-	 margin-bottom:25px;
-	}
-	.three img{
-
-	  
-	  width:300px;
-	  height:250px;
-	  
-
-	}
-
-	.four{
-
-	 float:left;
-	 margin-left:4%;
-	 margin-top: 25px;
-	 
-	}
-	.four img{
-
-	  
-	  width:300px;
-	  height:195px;
-	
-	}
-	.five{
-
-	  float:right;
-	 margin-right: 4%;
-	
-	}
-	.five img{
-
-	  
-	  width:300px;
-	  height:275px;
-	
-	}
-	.six{
-
-	  float:left;
-	  margin-left:4%;
 
 
-	}
-	.six img{
+    	.grid-container {
 
-	  
-	  width:300px;
-	  height:250px;
-	  
-	
+	  margin:0px auto;
+	  height: 120vh;
+	  display: grid;
+	  grid-template-columns: auto;
+	  grid-template-rows: auto;
+	  grid-template-areas: "one two"
+												 "three four"
+												 "five six";
+	  grid-column-gap: 10px;
+	  grid-row-gap: 10px;
 	}
 
 
 }
 
+.banner{
+  padding-top:0px;
 
-@media screen and (max-width: 810px) {
+}
+@media screen and (max-width: 676px) {
 
 	.banner{
 	  padding-top: 0px;
@@ -334,287 +135,44 @@
 	.bottom .bot1{
 	  padding-top: 5px;
 	}
-	.one{
-	  
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 20%;
 
+    .grid-container {
+
+	  margin:0px auto;
+	  height: auto;
+	  display: grid;
+	  grid-template-columns: ;
+	  grid-template-rows: ;
+	  grid-template-areas: "one"
+											   "two"
+											   "three"
+											   "four"
+											   "five"
+											   "five"
+											   "six";
+	  grid-column-gap: 10px;
+	  grid-row-gap: 10px;
 	}
-	.one img{
-	
-	width:350px;
-	height:350px;
-	}
-
-	.two{
-		
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 20%;
-	
-
-	  
-	
-	}
-	.two img{
-	width:350px;
-	height:350px;
+	.one {
+		 height: 50vh;
 	}
 
-	.three{
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 20%;
-
-	}
-	.three img{
-
-	width:350px;
-	height:350px;
-
+	.two {
+		 height: 50vh;
 	}
 
-	.four{
-
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 20%;
-	 
-	}
-	.four img{
-
-	width:350px;
-	height:350px;
-	}
-	.five{
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 20%;
-
-	}
-	.five img{
-
-	  
-	width:350px;
-	height:350px;
-	
-	}
-	.six{
-
-	  float:cent;
-	  margin-top: 25px;
-	  margin-left: 20%;
-
-
-	}
-	.six img{
-
-	  
-	width:350px;
-	height:350px;
-	  
-	
+	.three {
+	   height: 50vh;
 	}
 
-}
-@media screen and (max-width: 650px) {
-
-	.banner{
-	  padding-top: 0px;
-
+	.four {
+	   height: 50vh;
 	}
-
-	.bottom{
-	  margin: 25px auto;
+	.five {
+	   height: 50vh;
 	}
-	.bottom .bot1{
-	  padding-top: 5px;
-	}
-	.one{
-	  
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 15%;
-
-	}
-	.one img{
-	
-	width:350px;
-	height:350px;
-	}
-
-	.two{
-		
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 15%;
-	
-
-	  
-	
-	}
-	.two img{
-	width:350px;
-	height:350px;
-	}
-
-	.three{
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 15%;
-
-	}
-	.three img{
-
-	width:350px;
-	height:350px;
-
-	}
-
-	.four{
-
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 15%;
-	 
-	}
-	.four img{
-
-	width:350px;
-	height:350px;
-	}
-	.five{
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 15%;
-
-	}
-	.five img{
-
-	  
-	width:350px;
-	height:350px;
-	
-	}
-	.six{
-
-	  float:cent;
-	  margin-top: 25px;
-	  margin-left: 15%;
-
-
-	}
-	.six img{
-
-	  
-	width:350px;
-	height:350px;
-	  
-	
-	}
-
-}
-@media screen and (max-width: 550px) {
-
-	.banner{
-	  padding-top: 0px;
-
-	}
-
-	.bottom{
-	  margin: 25px auto;
-	}
-	.bottom .bot1{
-	  padding-top: 5px;
-	}
-	.one{
-	  
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 7.5%;
-
-	}
-	.one img{
-	
-	width:350px;
-	height:350px;
-	}
-
-	.two{
-		
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 7.5%;
-	
-
-	  
-	
-	}
-	.two img{
-	width:350px;
-	height:350px;
-	}
-
-	.three{
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 7.5%;
-
-	}
-	.three img{
-
-	width:350px;
-	height:350px;
-
-	}
-
-	.four{
-
-	 float:left;
-	 margin-top: 25px;
-	 margin-left: 7.5%;
-	 
-	}
-	.four img{
-
-	width:350px;
-	height:350px;
-	}
-	.five{
-
-	  float:left;
-	  margin-top: 25px;
-	  margin-left: 7.5%;
-
-	}
-	.five img{
-
-	  
-	width:350px;
-	height:350px;
-	
-	}
-	.six{
-
-	  float:cent;
-	  margin-top: 25px;
-	  margin-left: 7.5%;
-
-
-	}
-	.six img{
-
-	  
-	width:350px;
-	height:350px;
-	  
-	
+	.six {
+	   height: 50vh;
 	}
 
 }
