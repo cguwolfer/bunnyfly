@@ -52,8 +52,6 @@
 	
 	// phpinfo();
 	
-	//PURPOSE: get productName country catalog price brand waitingDays productInfo
-	
 	print("TEST<br>");
 	
 	$br="<br>";
@@ -65,9 +63,6 @@
 	// print("<br>");
 	// print_r($files2);
 	// print("<br>");
-	
-	global $dir_get;
-	$dir_get = false;
 	
 	iter_dir($dir);
 	
@@ -83,13 +78,11 @@
 					
 					if( is_dir( $new_path) ){	//is dir
 						
-						parseDir( $entry );
-						
 						iter_dir( $new_path );
 					}
 					else{	//is file
 						
-						// echo $new_path."<br>";
+						echo $new_path."<br>";
 						
 						if( strstr( $new_path, "txt") ){
 							
@@ -102,7 +95,7 @@
 									//get NT$
 									if( strstr( $value, "NT$" ) ){
 										
-										// echo $value."<br>";
+										echo $value."<br>";
 										// $str = 'In My Cart : 11 12 items';
 										preg_match_all('!\d+!', $value, $matches);
 										// print($matches[0][0]);
@@ -110,29 +103,15 @@
 										$price = intval($matches[0][0]);
 										printf("Price:%d"."<br>", intval($matches[0][0]) );
 										
-										break;
+										continue;
 									}
-									// if( strpos( $value ,"商品品牌") ){
-										// echo $value."<br>";
+									if( strpos( $value ,"商品品牌") ){
+										echo $value."<br>";
 										// strtok($value, ":");
 										// $brand = strtok(":");
 										// printf("Brand=%s"."<br>", $brand );
-									// }
+									}
 								}
-								
-								if( is_int($price) ){
-									
-									// echo("IS_INT"."<br>");
-									
-									// echo($result[$key+1]);
-									
-									$target = $result[$key+1];
-									
-									strtok($target, ":");
-									$brand = strtok(":");
-									printf("Brand=%s"."<br>", $brand );
-								}
-								
 							}
 						}
 						
@@ -142,21 +121,6 @@
 
 			closedir($handle);
 		}
-	}
-	
-	function parseDir( $path ){
-		
-		$country = strtok($path, "_");
-		$catalog = strtok("_");
-		$seller = strtok("_");
-		$p_name = strtok("_");
-		
-		echo( $country."<br>" );
-		echo( $catalog."<br>" );
-		echo( $seller."<br>" );
-		echo( $p_name."<br>" );
-		
-		$dir_get = true;
 	}
 	
 ?>
