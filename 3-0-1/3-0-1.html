@@ -22,104 +22,90 @@
 	<link rel="stylesheet" href="css/301.css">
 
 
-     <script>
+	<script>
+		window.onload=function(){
+			$.ajax(
+				{
+					url: "https://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=1&FileType=1&Lang=C&FolderType=",
+					dataType: "json",
+					success: function(jsonObj){
+						// 成功。JSON物件處理作業
+						// （省略）
+						console.log(jsonObj);
+						console.log(typeof(jsonObj));
+						function createDemo(name) {
+							var container = $('#pagination-' + name);
+							var sources = function () {
+								var result = [];
 
+								for (var i = 1; i < jsonObj.length; i++) {
+									result.push(i);
+								}
 
-window.onload=function(){
-	$.ajax({
- url: "https://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=1&FileType=1&Lang=C&FolderType=",
- dataType: "json",
- success: function(jsonObj){
- // 成功。JSON物件處理作業
- // （省略）
- 	console.log(jsonObj);
-	console.log(typeof(jsonObj));
-	function createDemo(name) {
-            var container = $('#pagination-' + name);
-            var sources = function () {
-                var result = [];
+								return result;
+							}();
 
-                for (var i = 1; i < jsonObj.length; i++) {
-                    result.push(i);
-                }
+							var options = {
+								dataSource: sources,
+								callback: function (response, pagination) {
+									window.console && console.log(response, pagination);
 
-                return result;
-            }();
+									var str="";
 
-            var options = {
-                dataSource: sources,
-                callback: function (response, pagination) {
-                    window.console && console.log(response, pagination);
+									$.each(response, function (index, item) {
+										str=str+
+											'<li><div class="photo">'+
+											'<img src="'+jsonObj[item].Picture1+'" width="220" height="220">'+
+											'</div>'+
+											'<div class="rsp"></div>'+
+											'<div class="text">'+
+											'<a href="../3-1-1/3-1-1.html">'+
+											'<h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>'+
+											'2017歐洲夏季折扣'+
+											'<br>'+
+											'6折精簡V字號<br>素食環保運動鞋Veja'+
+											'</h3>'+
+											'<p style="font-size: 14px; text-align:center">'+
+											jsonObj[item].Name +
+											'<p style="font-size: 12px; text-align:center">'+
+											'<img src="img/123.png" width="8" height="11">'+
+											'英國'+
+											'</p></p></a></div>'+
+											'</li>';
+									});
+									$("#posList").html(str);
+									onload=ShowProduct();
+								}
 
-                    var str="";
+							};
 
-                    $.each(response, function (index, item) {
-                        str=str+
-						'<li><div class="photo">'+
-						'<img src="'+jsonObj[item].Picture1+'" width="220" height="220">'+
-						'</div>'+
-    					'<div class="rsp"></div>'+
-    					'<div class="text">'+
-						'<a href="../3-1-1/3-1-1.html">'+
-						'<h3 style="border-bottom:2px solid #66F; align:center; margin-left:25px; width:175px"><br>'+
-						'2017歐洲夏季折扣'+
-						'<br>'+
-						'6折精簡V字號<br>素食環保運動鞋Veja'+
-						'</h3>'+
-						'<p style="font-size: 14px; text-align:center">'+
-						jsonObj[item].Name +
-						'<p style="font-size: 12px; text-align:center">'+
-						'<img src="img/123.png" width="8" height="11">'+
-						'英國'+
-						'</p></p></a></div>'+
-						'</li>'
-						;
-                    });
+							//$.pagination(container, options);
 
+							container.addHook('beforeInit', function () {
+								window.console && console.log('beforeInit...');
+							});
+							container.pagination(options);
 
+							container.addHook('beforePageOnClick', function () {
+								window.console && console.log('beforePageOnClick...');
+								//return false
+							});
 
-                    $("#posList").html(str);
-					onload=ShowProduct();
+							return container;
+						}
 
-                }
-
-            };
-
-            //$.pagination(container, options);
-
-            container.addHook('beforeInit', function () {
-                window.console && console.log('beforeInit...');
-            });
-            container.pagination(options);
-
-            container.addHook('beforePageOnClick', function () {
-                window.console && console.log('beforePageOnClick...');
-                //return false
-            });
-
-            return container;
-        }
-
-        createDemo('demo1');
-
-
-
-
- },
-  complete:onload=ShowProduct(),
- error:function(xhr, ajaxOptions, thrownError){
- // 錯誤。錯誤訊息處理
- alert(xhr.status);
- alert(thrownError);
- }
-})
-
-
-
-}
-
-
-</script>
+						createDemo('demo1');
+					},
+					complete:onload=ShowProduct(),
+					error:function(xhr, ajaxOptions, thrownError){
+						// 錯誤。錯誤訊息處理
+						alert(xhr.status);
+						alert(thrownError);
+					}
+				}
+			);
+		};
+	</script>
 <script>
 	function ShowProduct(){
 
@@ -330,7 +316,7 @@ window.onload=function(){
 
 
 			<li>
-			<div class="photo"><img src="img/10.jpeg" width="220" height="220" /></div>
+			<div class="photo"><img src="img/10.jpg" width="220" height="220" /></div>
 				<div class="rsp"></div>
 				<div class="text"><a href=""><h3 style="border-bottom:2px solid #9295c9; align:center; margin-left:25px; width:175px"><br>
 廚師們的夢幻逸品， 德國 Zwilling 雙人牌廚具料理刀具全商</h3><p style="font-size: 12px; text-align:center"><img src="img/123.png" width="8" height="11"> 美國
