@@ -1,5 +1,5 @@
 <?php
-	
+	error_reporting(0);
 	/*
 	require_once "meekrodb.2.3.class.php";
 	
@@ -55,7 +55,7 @@
 	//PURPOSE: get productName country catalog price brand waitingDays productInfo
 	require_once "../php_library/db_connection.php";
 	
-	print("TEST<br>");
+	// print("TEST<br>");
 	
 	$br="<br>";
 	$dir    = './products';
@@ -77,7 +77,21 @@
 	$seller_id = 1;
 	// $GLOBALS[seller_id] = 1;
 	
+	global $data_array;
+	
+	$data_array=array();
+	
 	iter_dir($dir);
+	
+	// echo("Print array.....<br>\n");
+	// print_r( $data_array );
+	
+	print json_encode( $data_array);
+	
+	// $test_array = array( "中文", "測試", 1, 2 );
+	// print json_encode( $test_array, JSON_UNESCAPED_UNICODE);
+	
+	// echo("TEST END..........<br>\n");
 	
 	class productObj{
 		
@@ -124,6 +138,8 @@
 		
 		function prepareAndSave(){
 			
+			global $data_array;
+			
 			//check NOT NULL columns
 			do{
 				if( $this->seller_userID == null ) break;
@@ -137,13 +153,33 @@
 					
 					// echo("checkAndSave fail!"."<br>");
 				// }
+				// echo("Save to DB<br>\n");
+				
+				$tmp_array = array( 
+					"seller_userID"=>$this->seller_userID,
+					"productName"=>$this->productName,
+					"country"=>$this->country,
+					"catalog"=>$this->catalog,
+					"price"=>$this->price,
+					"RemainingQuantity"=>$this->RemainingQuantity,
+					"brand"=>$this->brand,
+					"waitingDays"=>$this->waitingDays,
+					"productInfo"=>$this->productInfo,
+					// "Description"=>$this->Description,
+					// "picture"=>$this->picture,
+					// "picture2"=>$this->picture2
+				);
+				
+				array_push( $data_array, $tmp_array );
+				
+				// print_r( $data_array );
 				
 			}while(false);
 			
 			$this->resetMe();
 		}
 		
-		function checkState(){
+		public function checkMyContents(){
 			
 			do{
 				
@@ -151,7 +187,9 @@
 				if( $this->brand == null ) break;
 				if( $this->price == null ) break;
 				
+				// echo("CHECK SUCESS<br>\n");
 				
+				return true;
 				
 			}while(false);
 			
@@ -172,11 +210,12 @@
 			$this->picture = null;
 			$this->picture2 = null;
 			
-			echo("RESET...\n<br>");
+			// echo("RESET...\n<br>");
 		}
 		
 		function __construct(){
 			
+			// echo("CREATE OBJ __construct<br>\n");
 			$this->resetMe();
 		}
 	}
@@ -229,7 +268,7 @@
 						//txt file
 						if( strstr( $new_path, "txt") ){
 							
-							echo($new_path."<br>");
+							// echo($new_path."<br>");
 							
 							if( false !== ($result = file($new_path) ) ){
 								
@@ -248,8 +287,10 @@
 										// print($matches[0][0]);
 										
 										$price = intval($matches[0][0]);
-										$p_obj->price = $price;
-										printf("Price:%d"."<br>", intval($matches[0][0]) );
+										if( $p_obj != null ){
+											$p_obj->price = $price;
+											// printf("Price:%d"."<br>", intval($matches[0][0]) );
+										}
 										
 										break;
 									}
@@ -271,16 +312,22 @@
 									
 									strtok($target, ":");
 									$brand = strtok(":");
-									$p_obj->brand = $brand;
-									printf("Brand=%s"."<br>", $brand );
+									if( $p_obj != null ){
+										$p_obj->brand = $brand;
+										// printf("Brand=%s"."<br>", $brand );
+									}
 								}
 								
 							}
 						}
-						
-						if( $p_obj!=null && $p_obj->checkState() ){
+						// echo("CHECK NULL1<br>\n");
+						if( $p_obj != null ){
+							// echo("CHECK NULL<br>\n");
 							
-							$p_obj->prepareAndSave();
+							if( $p_obj->checkMyContents() ){
+								
+								$p_obj->prepareAndSave();
+							}
 						}
 						
 					}
@@ -294,6 +341,7 @@
 	function parseDir( $path ){
 		
 		global $seller_id;
+		global $p_obj;
 		$country = strtok($path, "_");
 		$catalog = strtok("_");
 		$seller = strtok("_");
@@ -303,16 +351,18 @@
 		
 		if( strlen($country) > 0 ){
 			
-			$country_num = compare_country( $country );
+			// $country_num = compare_country( $country );
 			
-			$p_obj->country = $country_num;
+			// $p_obj->country = $country_num;
+			$p_obj->country = $country;
 		}
 		
 		if( strlen($catalog) > 0 ){
 			
-			$cata_num = compare_catalog( $catalog );
+			// $cata_num = compare_catalog( $catalog );
 			
-			$p_obj->catalog = $cata_num;
+			// $p_obj->catalog = $cata_num;
+			$p_obj->catalog = $catalog;
 		}
 		
 		if( strlen($seller) > 0 ){
@@ -332,7 +382,7 @@
 		// echo( $country."<br>" );
 		// echo( $catalog."<br>" );
 		// echo( $seller."<br>" );
-		// echo( $p_name."<br>" );
+		// echo( $productName."<br>" );
 		
 		// $dir_get = true;
 	}
@@ -423,4 +473,33 @@
 		
 	}
 	
+	function arrayRecursive(&$array, $function, $apply_to_keys_also = false)
+	{
+		static $recursive_counter = 0;
+		if (++$recursive_counter > 1000) {
+			die('possible deep recursion attack');
+		}
+		foreach ($array as $key => $value) {
+			if (is_array($value)) {
+				arrayRecursive($array[$key], $function, $apply_to_keys_also);
+			} else {
+				$array[$key] = $function($value);
+			}
+		
+			if ($apply_to_keys_also && is_string($key)) {
+				$new_key = $function($key);
+				if ($new_key != $key) {
+					$array[$new_key] = $array[$key];
+					unset($array[$key]);
+				}
+			}
+		}
+		$recursive_counter--;
+	}
+	
+	function JSON($array) {
+			arrayRecursive($array, 'urlencode', true);
+			$json = json_encode($array);
+			return urldecode($json);
+	}
 ?>
