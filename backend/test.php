@@ -159,7 +159,9 @@
 					"seller_userID"=>$this->seller_userID,
 					
 					// "productName"=>$this->productName,
-					"productName"=>urlencode($this->productName),
+					// "productName"=>urlencode($this->productName),
+					"productName"=>utf8_encode($this->productName),
+					// "productName"=>rawurlencode($this->productName),
 					
 					// "country"=>$this->country,
 					"country"=>$this->country,
