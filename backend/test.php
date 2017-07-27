@@ -157,8 +157,13 @@
 				
 				$tmp_array = array( 
 					"seller_userID"=>$this->seller_userID,
-					"productName"=>$this->productName,
+					
+					// "productName"=>$this->productName,
+					"productName"=>urlencode($this->productName),
+					
+					// "country"=>$this->country,
 					"country"=>$this->country,
+					
 					"catalog"=>$this->catalog,
 					"price"=>$this->price,
 					"RemainingQuantity"=>$this->RemainingQuantity,
@@ -167,7 +172,7 @@
 					"productInfo"=>$this->productInfo,
 					// "Description"=>$this->Description,
 					// "picture"=>$this->picture,
-					// "picture2"=>$this->picture2
+					// "picture2"=>$this->picture2,
 				);
 				
 				array_push( $data_array, $tmp_array );

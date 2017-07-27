@@ -66,12 +66,13 @@
 											jsonObj[item].productName+
 											'</h3>'+
 											'<p style="font-size: 14px; text-align:center">'+
-											jsonObj[item].Name +
+											jsonObj[item].productName +
 											'<p style="font-size: 12px; text-align:center">'+
 											'<img src="'+jsonObj[item].picture2+'" width="8" height="11">'+
 											jsonObj[item].country+
 											'</p></p></a></div>'+
 											'</li>';
+										console.log(jsonObj[item].productName);
 									});
 									$("#posList").html(str);
 									onload=ShowProduct();
