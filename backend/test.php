@@ -75,6 +75,7 @@
 	
 	global $seller_id;
 	$seller_id = 1;
+	// $GLOBALS[seller_id] = 1;
 	
 	iter_dir($dir);
 	
@@ -121,25 +122,40 @@
 			}
 		}
 		
-		function checkAndSave(){
+		function prepareAndSave(){
 			
 			//check NOT NULL columns
 			do{
-				if( $seller_userID == null ) break;
-				if( $country == null ) break;
-				if( $catalog == null ) break;
-				if( $price == null ) break;
-				if( $RemainingQuantity == null ) break;
+				if( $this->seller_userID == null ) break;
+				if( $this->country == null ) break;
+				if( $this->catalog == null ) break;
+				if( $this->price == null ) break;
+				if( $this->RemainingQuantity == null ) break;
 				
 				//save to db
-				if( !saveToDataBase() ){
+				// if( !$this->saveToDataBase() ){
 					
-					echo("checkAndSave fail!"."<br>");
-				}
+					// echo("checkAndSave fail!"."<br>");
+				// }
 				
 			}while(false);
 			
 			$this->resetMe();
+		}
+		
+		function checkState(){
+			
+			do{
+				
+				if( $this->picture == null ) break;
+				if( $this->brand == null ) break;
+				if( $this->price == null ) break;
+				
+				
+				
+			}while(false);
+			
+			return false;
 		}
 		
 		function resetMe(){
@@ -155,6 +171,8 @@
 			$this->productInfo = null;
 			$this->picture = null;
 			$this->picture2 = null;
+			
+			echo("RESET...\n<br>");
 		}
 		
 		function __construct(){
@@ -164,6 +182,8 @@
 	}
 	
 	function iter_dir( $dir ){
+		
+		global $p_obj;
 		
 		if ($handle = opendir($dir)) {
 
@@ -187,6 +207,23 @@
 						if( strstr( $new_path, "jpg") ){
 							
 							// $p_obj->
+							if( $p_obj != null ){								
+								if( $p_obj->picture == NULL ){
+									if( ($p_obj->picture = file_get_contents($new_path)) == false )
+										$p_obj->picture = null;
+									// else{
+										// header("Content-type: image/jpeg");
+										// echo($p_obj->picture);
+										// echo(filesize($new_path));
+									// }
+								}
+								
+								if( $p_obj->picture2 == NULL ){
+									if( ($p_obj->picture2 = file_get_contents($new_path)) == false )
+										$p_obj->picture2 = null;
+								}
+							}
+							
 						}
 						
 						//txt file
@@ -211,6 +248,7 @@
 										// print($matches[0][0]);
 										
 										$price = intval($matches[0][0]);
+										$p_obj->price = $price;
 										printf("Price:%d"."<br>", intval($matches[0][0]) );
 										
 										break;
@@ -233,10 +271,16 @@
 									
 									strtok($target, ":");
 									$brand = strtok(":");
+									$p_obj->brand = $brand;
 									printf("Brand=%s"."<br>", $brand );
 								}
 								
 							}
+						}
+						
+						if( $p_obj!=null && $p_obj->checkState() ){
+							
+							$p_obj->prepareAndSave();
 						}
 						
 					}
@@ -249,10 +293,11 @@
 	
 	function parseDir( $path ){
 		
+		global $seller_id;
 		$country = strtok($path, "_");
 		$catalog = strtok("_");
 		$seller = strtok("_");
-		$p_name = strtok("_");
+		$productName = strtok("_");
 		
 		$p_obj = new productObj();
 		
@@ -272,7 +317,10 @@
 		
 		if( strlen($seller) > 0 ){
 			
-			$p_obj->seller_userID = $seller_id++;
+			// $p_obj->seller_userID = $GLOBALS[seller_id]++;
+			$p_obj->seller_userID = ($seller_id++)%5;
+			// echo($seller_id);
+			// echo($p_obj->seller_userID);
 		}
 		
 		if( strlen($productName) > 0 ){
@@ -291,35 +339,35 @@
 	
 	function compare_country( $country ){
 		
-		if( strstr( $catalog, "日本" ) ){
+		if( strstr( $country, "日本" ) ){
 			
 			return 1;
 		}
-		else if( strstr( $catalog, "韓國" ) ){
+		else if( strstr( $country, "韓國" ) ){
 			
 			return 2;
 		}
-		else if( strstr( $catalog, "泰國" ) ){
+		else if( strstr( $country, "泰國" ) ){
 			
 			return 3;
 		}
-		else if( strstr( $catalog, "香港" ) ){
+		else if( strstr( $country, "香港" ) ){
 			
 			return 4;
 		}
-		else if( strstr( $catalog, "法國" ) ){
+		else if( strstr( $country, "法國" ) ){
 			
 			return 5;
 		}
-		else if( strstr( $catalog, "美國" ) ){
+		else if( strstr( $country, "美國" ) ){
 			
 			return 6;
 		}
-		else if( strstr( $catalog, "英國" ) ){
+		else if( strstr( $country, "英國" ) ){
 			
 			return 7;
 		}
-		else if( strstr( $catalog, "西班牙" ) ){
+		else if( strstr( $country, "西班牙" ) ){
 			
 			return 8;
 		}
